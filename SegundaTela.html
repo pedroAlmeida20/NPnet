@@ -75,7 +75,7 @@
     background-color: #FFD700;
   }
   .fontetabela{
-    color:#FFD700;
+    color:white;
   }
 
 
@@ -86,25 +86,77 @@
 }
   body {
       position: relative; 
+   background-image: url("https://image.freepik.com/vetores-gratis/mao-icones-sobre-educacao-desenhado-em-um-fundo-preto_1306-141.jpg");
+   background-color: #cccccc;
 
 
   }
+
   #t1 {padding-top:30px;height:600px;color: #fff; background-color: #1E88E5;}
   #t2 {padding-top:30px;height:600px;color: #fff; background-color: #673ab7;}
   #t3 {padding-top:30px;height:600px;color: #fff; background-color: #ff9800;}
   #t4 {padding-top:30px;height:600px;color: #fff; background-color: #00bcd4;}
   #t5 {padding-top:30px;height:600px;color: #fff; background-color: #858cd4;}
   #tPweb {padding-top:30px;height:600px;color: #fff; background-color: #009688;}
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
+
+/* mudar cor de botão abaixo da tabela*/
+
+.info {
+    border-color: white;
+    color: blue
+}
+
+/*transição*/
+.info:hover {
+    background: white;
+    color: blue;
+}
+
+/*Botões do final da tabela*/
+.button {
+  border-radius: 12px; /*arredonda as bordas*/
+  background-color: #363636 ;/* cor de fundo*/
+  border: none;
+  color: white ; /*Cor inicial da fonte do botão*/
+  text-align: center; /*alinhamento do botão*/
+  font-size: 12px; /*tamanho da fonte*/
+  padding: 12px; /*tamanho do preenchimento*/
+  transition: 0.5s; /*duração da transição*/
+  cursor: pointer;
+
+  /* cor de chundo #363636*/
+  
+}
+
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+
   </style>
 
 </head>
-<body class="container" style="background-color: #FFD700;" >
+<body class="container" >
   <div class="row">
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -158,9 +210,9 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content" >
-      <div class="modal-header fundoDestaque">
+      <div class="modal-header" style="background-color: #FFD700;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"  id="myModalLabel">Por favor insira os dados corretamente</h4>
+        <h4 class="modal-title"  id="myModalLabel" style="color:white">Por favor insira os dados corretamente</h4>
       </div>
       <div class="modal-body">
         
@@ -181,29 +233,25 @@
 
 <!-- Inicio da classe Modal2!-->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content" >
-      <div class="modal-header fundoDestaque">
+      <div class="modal-header " style="background-color:#FFD700;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"  id="myModalLabel">Sobre Monitoria</h4>
+        <h4 class="modal-title"  id="myModalLabel" style="color:white">Sobre Monitoria</h4>
       </div>
       <div class="modal-body">
         
-          <h1>EDITAL Nº 01/2018 -  PROGRAMA INSTITUCIONAL DE MONITORIA DE CURSOS TÉCNICOS 
-A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educação, Ciência e Tecnologia de Alagoas, por meio da Comissão de Elaboração do Edital de Monitoria e Seleção dos Candidatos do Campus Palmeira dos Índios, doravante denominada Comissão de Seleção, divulga que está aberto o processo para seleção de planos de monitoria, orientados por docentes desta instituição, e bolsistas do Programa Institucional de Monitoria do IFAL Campus Palmeira dos Índios, destinados aos discentes de Cursos Técnicos, conforme as disposições contidas neste Edital. 
+          <h3> PROGRAMA INSTITUCIONAL DE MONITORIA DE CURSOS TÉCNICOS</h3>
  
-1. DO PROGRAMA DE MONITORIA DO IFAL CAMPUS PALMEIRA DOS ÍNDIOS 
+<p>1. DO PROGRAMA DE MONITORIA DO IFAL CAMPUS PALMEIRA DOS ÍNDIOS 
  
 1.1. Monitoria é um programa de incentivo à formação acadêmica, que visa à ampliação dos espaços de aprendizagem, à melhoria da qualidade do ensino e ao desenvolvimento da autonomia e formação integral dos estudantes; 1.2. O Programa de Monitoria do IFAL Campus Palmeira dos Índios, regido por este edital, é destinado aos estudantes dos cursos técnicos; 1.3. O estudante-monitor será orientado sempre por um docente-orientador; 1.4. O docente-orientador deve ser professor dos cursos técnicos do IFAL Campus Palmeira dos Índios. 
 2. DOS OBJETIVOS DA MONITORIA DO IFAL CAMPUS PALMEIRA DOS ÍNDIOS 
  
 2.1. Favorecer a cooperação entre docentes e estudantes, visando à melhoria da qualidade do ensino; 2.2. Complementar a formação acadêmica do estudante-monitor; 2.3. Possibilitar o compartilhamento de conhecimentos através da interação entre estudantes;  2.4. Promover o desenvolvimento de aptidões para a docência; 2.5. Contribuir para a redução dos problemas de repetência e evasão; 2.6. Proporcionar o aprofundamento dos conhecimentos teóricos e metodológicos que, aliados à práxis pedagógica, venham fornecer subsídios para uma futura inserção no mundo do trabalho. 
-2 
-3. DOS TIPOS DE MONITORIA 
+
  
-3.1. O sistema de monitoria está classificado em dois tipos: Monitoria remunerada (com bolsa) e Monitoria voluntária (sem bolsa); 3.2. O sistema de monitoria voluntária obedecerá às normas estabelecidas para os monitores remunerados, excetuando-se os itens 6.5 e 6.6 deste Edital; 3.3. A monitoria remunerada por bolsa não gera nenhum vínculo empregatício entre o IFAL e o estudante; 3.4. O estudante-monitor bolsista ou voluntário deverá assinar um Termo de Compromisso específico à atividade de monitoria (ANEXOS V e VI, respectivamente); 3.5. Em nenhuma hipótese o estudante-monitor deverá ser aproveitado para suprir carência de servidores da instituição; 3.6. O exercício da monitoria implicará o cumprimento de cargas horárias semanais de, no mínimo, 12 (doze) e, no máximo, 15 (quinze) horas semanais de atividades, de acordo com o plano de monitoria, as quais não poderão ser coincidentes com o horário das aulas do estudante em seu curso regular; 3.7. As atividades de monitoria não podem prejudicar o horário das atividades acadêmicas do estudante; 
- 
- </h1>
+ </p>
       <div class="modal-footer">
               <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancelar</button>
       </div>
@@ -220,21 +268,21 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
 <!-- Copiar o codigo apartir daqui!-->
       <div class="container-fluid" id="t1">
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-11">
+          <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
-    <div class=" col-sm-5">
+    <div class=" col-lg-5">
       <h3>Nome da Monitoria</h3>
 
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-lg-1">
       <h3>Monitor</h3>
     </div>
-     <div class=" col-sm-offset-1 col-sm-3  ">
+     <div class=" col-lg-offset-1 col-lg-3  ">
       <h3>Professor</h3>
      <!-- <h4>UNEAL</h4>!-->
 
@@ -242,16 +290,16 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
     
 </div>
    <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
       <h5>Nathalia Bernardo</h5>
     </div>
-   <div class="col-sm-4">
+   <div class="col-lg-4">
       <h5>Glauber Ferreira</h5>
     </div>
   </div>
  
     <div class="row">
-      <div class=" col-sm-offset-3 col-sm-5">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -294,12 +342,19 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       </div>
 
 
-                <hr style="background-color: black" class="col-sm-10">
+                <hr style="background-color: black" class="col-lg-10">
 
  <div class="row">
-     <div  class="col-sm-3 ">
-      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      <button type="button" class="btn btn-warning btn-sm" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+     <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -321,21 +376,21 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
 <!-- Copiar o codigo apartir daqui!-->
      <div class="container-fluid" id="t2">
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-11">
+          <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
-    <div class=" col-sm-5">
+    <div class=" col-lg-5">
       <h3>Nome da Monitoria</h3>
 
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-lg-1">
       <h3>Monitor</h3>
     </div>
-     <div class=" col-sm-offset-1 col-sm-3  ">
+     <div class=" col-lg-offset-1 col-lg-3  ">
       <h3>Professor</h3>
      <!-- <h4>UNEAL</h4>!-->
 
@@ -343,16 +398,16 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
     
 </div>
    <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
       <h5>Nathalia Bernardo</h5>
     </div>
-   <div class="col-sm-4">
+   <div class="col-lg-4">
       <h5>Glauber Ferreira</h5>
     </div>
   </div>
  
     <div class="row">
-      <div class=" col-sm-offset-3 col-sm-5">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -395,12 +450,19 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       </div>
 
 
-                <hr style="background-color: black" class="col-sm-10">
+                <hr style="background-color: black" class="col-lg-10">
 
  <div class="row">
-     <div  class="col-sm-3 ">
-      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      <button type="button" class="btn btn-warning btn-sm" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+     <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -423,21 +485,21 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
 <!-- Copiar o codigo apartir daqui!-->
       <div class="container-fluid" id="t3">
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-11">
+          <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
-    <div class=" col-sm-5">
+    <div class=" col-lg-5">
       <h3>Nome da Monitoria</h3>
 
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-lg-1">
       <h3>Monitor</h3>
     </div>
-     <div class=" col-sm-offset-1 col-sm-3  ">
+     <div class=" col-lg-offset-1 col-lg-3  ">
       <h3>Professor</h3>
      <!-- <h4>UNEAL</h4>!-->
 
@@ -445,16 +507,16 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
     
 </div>
    <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
       <h5>Nathalia Bernardo</h5>
     </div>
-   <div class="col-sm-4">
+   <div class="col-lg-4">
       <h5>Glauber Ferreira</h5>
     </div>
   </div>
  
     <div class="row">
-      <div class=" col-sm-offset-3 col-sm-5">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -467,8 +529,8 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
         <th>Sexta</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
+    <tbody >
+      <tr >
         <td>8:00/66</td>
         <td>8:00/66</td>
         <td>8:00/66</td>
@@ -497,14 +559,24 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       </div>
 
 
-                <hr style="background-color: black" class="col-sm-10">
+                <hr style="background-color: black" class="col-lg-10">
 
  <div class="row">
-     <div  class="col-sm-3 ">
-      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      <button type="button" class="btn btn-warning btn-sm" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+
+     <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
     </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
+    </div>
+
   </div>
+
   </div>
     
    
@@ -525,21 +597,21 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       <!-- Copiar o codigo apartir daqui!-->
       <div class="container-fluid" id="t4">
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-11">
+          <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
-    <div class=" col-sm-5">
+    <div class=" col-lg-5">
       <h3>Nome da Monitoria</h3>
 
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-lg-1">
       <h3>Monitor</h3>
     </div>
-     <div class=" col-sm-offset-1 col-sm-3  ">
+     <div class=" col-lg-offset-1 col-lg-3  ">
       <h3>Professor</h3>
      <!-- <h4>UNEAL</h4>!-->
 
@@ -547,16 +619,16 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
     
 </div>
    <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
       <h5>Nathalia Bernardo</h5>
     </div>
-   <div class="col-sm-4">
+   <div class="col-lg-4">
       <h5>Glauber Ferreira</h5>
     </div>
   </div>
  
     <div class="row">
-      <div class=" col-sm-offset-3 col-sm-5">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -569,7 +641,7 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
         <th>Sexta</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody >
       <tr>
         <td>8:00/66</td>
         <td>8:00/66</td>
@@ -599,12 +671,19 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       </div>
 
 
-                <hr style="background-color: black" class="col-sm-10">
+                <hr style="background-color: black" class="col-lg-10">
 
  <div class="row">
-     <div  class="col-sm-3 ">
-      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      <button type="button" class="btn btn-warning btn-sm" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -627,21 +706,21 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       <!-- Copiar o codigo apartir daqui!-->
       <div class="container-fluid" id="t5">
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-11">
+          <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
-    <div class=" col-sm-5">
+    <div class=" col-lg-5">
       <h3>Nome da Monitoria</h3>
 
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-lg-1">
       <h3>Monitor</h3>
     </div>
-     <div class=" col-sm-offset-1 col-sm-3  ">
+     <div class=" col-lg-offset-1 col-lg-3  ">
       <h3>Professor</h3>
      <!-- <h4>UNEAL</h4>!-->
 
@@ -649,16 +728,16 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
     
 </div>
    <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
       <h5>Nathalia Bernardo</h5>
     </div>
-   <div class="col-sm-4">
+   <div class="col-lg-4">
       <h5>Glauber Ferreira</h5>
     </div>
   </div>
  
     <div class="row">
-      <div class=" col-sm-offset-3 col-sm-5">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -701,12 +780,19 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       </div>
 
 
-                <hr style="background-color: black" class="col-sm-10">
+                <hr style="background-color: black" class="col-lg-10">
 
  <div class="row">
-     <div  class="col-sm-3 ">
-      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      <button type="button" class="btn btn-warning btn-sm" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -729,21 +815,21 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       <!-- Copiar o codigo apartir daqui!-->
       <div class="container-fluid" id="t1">
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-11">
+          <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
-    <div class=" col-sm-5">
+    <div class=" col-lg-5">
       <h3>Nome da Monitoria</h3>
 
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-lg-1">
       <h3>Monitor</h3>
     </div>
-     <div class=" col-sm-offset-1 col-sm-3  ">
+     <div class=" col-lg-offset-1 col-lg-3  ">
       <h3>Professor</h3>
      <!-- <h4>UNEAL</h4>!-->
 
@@ -751,16 +837,16 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
     
 </div>
    <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
       <h5>Nathalia Bernardo</h5>
     </div>
-   <div class="col-sm-4">
+   <div class="col-lg-4">
       <h5>Glauber Ferreira</h5>
     </div>
   </div>
  
     <div class="row">
-      <div class=" col-sm-offset-3 col-sm-5">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -803,12 +889,19 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       </div>
 
 
-                <hr style="background-color: black" class="col-sm-10">
+                <hr style="background-color: black" class="col-lg-10">
 
  <div class="row">
-     <div  class="col-sm-3 ">
-      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      <button type="button" class="btn btn-warning btn-sm" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+     <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -832,21 +925,21 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       <!-- Copiar o codigo apartir daqui!-->
       <div class="container-fluid" id="tPweb">
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-11">
+          <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
-    <div class=" col-sm-5">
+    <div class=" col-lg-5">
       <h3>Nome da Monitoria</h3>
 
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-lg-1">
       <h3>Monitor</h3>
     </div>
-     <div class=" col-sm-offset-1 col-sm-3  ">
+     <div class=" col-lg-offset-1 col-lg-3  ">
       <h3>Professor</h3>
      <!-- <h4>UNEAL</h4>!-->
 
@@ -854,16 +947,16 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
     
 </div>
    <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
       <h5>Nathalia Bernardo</h5>
     </div>
-   <div class="col-sm-4">
+   <div class="col-lg-4">
       <h5>Glauber Ferreira</h5>
     </div>
   </div>
  
     <div class="row">
-      <div class=" col-sm-offset-3 col-sm-5">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -906,12 +999,19 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
       </div>
 
 
-                <hr style="background-color: black" class="col-sm-10">
+                <hr style="background-color: black" class="col-lg-10">
 
  <div class="row">
-     <div  class="col-sm-3 ">
-      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      <button type="button" class="btn btn-warning btn-sm" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+     <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -930,13 +1030,27 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
         </div>       
       </div><br>
 
+      <div class="row">
+        <div class=" col-lg-offset-5 col-lg-2">
+        <ul class="pagination">
+          <li class="active"><a href="#">1</a></li>
+          <li ><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+        </ul> 
+      </div>
+      </div>
+
 <!-- Até aqui!-->
       <div class="row">
-
+            
             <footer class="my-3 pt-5 text-muted  text-small text-center">
        
-              <div class="col-sm-offset-4 col-sm-4">
-  <h5 class="center">Equipe Desenvolvedora</h5>  
+              <div class="col-lg-offset-4 col-lg-4">
+                <!--Fundo do Slider-->
+                 <div class="col-lg-12" style="background-color: #FFD700">
+  <h5 class="center">Equipe Desenvolvedora</h5 style="background-color: #FFD700;">  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -972,6 +1086,8 @@ A Diretora Geral do Campus Palmeira dos Índios, do Instituto Federal de Educaç
 
 
       </footer>
+                </div>
+
           <!--</div>-->
         </div>
     </div>
