@@ -97,7 +97,7 @@
   #t3 {padding-top:30px;height:600px;color: #fff; background-color: #ff9800;}
   #t4 {padding-top:30px;height:600px;color: #fff; background-color: #00bcd4;}
   #t5 {padding-top:30px;height:600px;color: #fff; background-color: #858cd4;}
-  #tPweb {padding-top:30px;height:600px;color: #fff; background-color: #009688;}
+  #t6 {padding-top:30px;height:600px;color: #fff; background-color: #009688;}
 
 .center {
     display: block;
@@ -164,10 +164,21 @@ input[type=text], select, textarea {
     margin-bottom: 16px; /* Margem inferior */
     resize: vertical /* Permitir ao usuário redimensionar verticalmente a área de texto (não horizontalmente) */
 }
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
 
-
-/* Adiciona uma cor de fundo e algum preenchimento ao redor do formulário*/
-
+.active, .collapsible:hover {
+    background-color: #555;
+}
 
   </style>
 
@@ -218,8 +229,9 @@ input[type=text], select, textarea {
 
 
 
-
 </div><br>
+
+
 
 
 <!-- Inicio da classe Modal!-->
@@ -328,16 +340,126 @@ input[type=text], select, textarea {
 <!-- Fim da classe Moda3!-->
 
 <!-- Copiar o codigo apartir daqui!-->
-      <div  id="t1">
-        <div class="row">
+      <div >
+        <div class="row"  id="t1">
+
           <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
     <div class=" col-lg-5">
-      <h3>Nome da Monitoria</h3>
+     <h3>Nome da Monitoria</h3>
+</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+      <h3>Monitor</h3>
+    </div>
+     <div class=" col-lg-offset-1 col-lg-3  ">
+      <h3>Professor</h3>
+    </div>
+    
+</div>
+   <div class="row">
+    <div class="col-lg-2">
+      <h5>Nathalia Bernardo</h5>
+    </div>
+   <div class="col-lg-4">
+      <h5>Glauber Ferreira</h5>
+    </div>
+  </div>
+ 
+    <div class="row" style="overflow-x:auto;">
+      <div class=" col-lg-offset-3 col-lg-5">
+<h2>Horário</h2>
+  <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
+  <table class="table table-hover fontetabela">
+    <thead>
+      <tr class="fontetabela">
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>sem</td>
+      </tr>
+      <tr>
+        <td>10:00/71</td>
+        <td>10:00/66</td>
+        <td>10:00/71</td>
+        <td>10:00/71</td>
+        <td>sem</td>
+      </tr>
+      <tr>
+        <td>11:30/avulso</td>
+        <td>11:30/66</td>
+        <td>11:30/avulso</td>
+        <td>11:30/avulso</td>
+        <td>sem</td>
+      </tr>
 
+    </tbody>
+  </table>  
+       </div>
+      </div>
+
+                <hr style="background-color: black" class="col-lg-10">
+
+ <div class="row">
+     <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
+    </div>
+  </div>
+      </div>
+
+
+  </div>
+    
+   
+  </div>
+
+            
+    </div>
+
+  </div>
+  
+    </form>
+
+          </div>
+        </div>       
+      </div><br>
+      <!---até aqui-->
+
+<!-- Copiar o codigo apartir daqui!-->
+      <div >
+        <div class="row"  id="t2">
+
+          <div class="col-lg-offset-2 col-lg-11">
+
+             <form id="survey-form" class="form-horizontal" action="#">
+ <div class="form-group  ">
+  <div class="row">
+    <div class=" col-lg-5">
+     <h3>Nome da Monitoria</h3>
+</div>
     </div>
   </div>
   <div class="row">
@@ -401,8 +523,6 @@ input[type=text], select, textarea {
   </table>  
        </div>
       </div>
-      </div>
-
 
                 <hr style="background-color: black" class="col-lg-10">
 
@@ -419,6 +539,9 @@ input[type=text], select, textarea {
 <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
+      </div>
+
+
   </div>
     
    
@@ -434,18 +557,20 @@ input[type=text], select, textarea {
           </div>
         </div>       
       </div><br>
+      <!---até aqui-->
 
 <!-- Copiar o codigo apartir daqui!-->
-     <div  id="t2">
-        <div class="row">
+      <div >
+        <div class="row"  id="t3">
+
           <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
     <div class=" col-lg-5">
-      <h3>Nome da Monitoria</h3>
-
+     <h3>Nome da Monitoria</h3>
+</div>
     </div>
   </div>
   <div class="row">
@@ -468,8 +593,8 @@ input[type=text], select, textarea {
     </div>
   </div>
  
-    <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5" style="overflow-x:auto;">
+    <div class="row" style="overflow-x:auto;">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -509,8 +634,6 @@ input[type=text], select, textarea {
   </table>  
        </div>
       </div>
-      </div>
-
 
                 <hr style="background-color: black" class="col-lg-10">
 
@@ -524,9 +647,12 @@ input[type=text], select, textarea {
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
+      </div>
+
+
   </div>
     
    
@@ -542,19 +668,240 @@ input[type=text], select, textarea {
           </div>
         </div>       
       </div><br>
-<!-- até aqui!-->
+      <!---até aqui-->
+      <!-- Copiar o codigo apartir daqui!-->
+      <div >
+        <div class="row"  id="t4">
 
+          <div class="col-lg-offset-2 col-lg-11">
+
+             <form id="survey-form" class="form-horizontal" action="#">
+ <div class="form-group  ">
+  <div class="row">
+    <div class=" col-lg-5">
+     <h3>Nome da Monitoria</h3>
+</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+      <h3>Monitor</h3>
+    </div>
+     <div class=" col-lg-offset-1 col-lg-3  ">
+      <h3>Professor</h3>
+     <!-- <h4>UNEAL</h4>!-->
+
+    </div>
+    
+</div>
+   <div class="row">
+    <div class="col-lg-2">
+      <h5>Nathalia Bernardo</h5>
+    </div>
+   <div class="col-lg-4">
+      <h5>Glauber Ferreira</h5>
+    </div>
+  </div>
+ 
+    <div class="row" style="overflow-x:auto;">
+      <div class=" col-lg-offset-3 col-lg-5">
+<h2>Horário</h2>
+  <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
+  <table class="table table-hover fontetabela">
+    <thead>
+      <tr class="fontetabela">
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>sem</td>
+      </tr>
+      <tr>
+        <td>10:00/71</td>
+        <td>10:00/66</td>
+        <td>10:00/71</td>
+        <td>10:00/71</td>
+        <td>sem</td>
+      </tr>
+      <tr>
+        <td>11:30/avulso</td>
+        <td>11:30/66</td>
+        <td>11:30/avulso</td>
+        <td>11:30/avulso</td>
+        <td>sem</td>
+      </tr>
+
+    </tbody>
+  </table>  
+       </div>
+      </div>
+
+                <hr style="background-color: black" class="col-lg-10">
+
+ <div class="row">
+     <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
+    </div>
+  </div>
+      </div>
+
+
+  </div>
+    
+   
+  </div>
+
+            
+    </div>
+
+  </div>
+  
+    </form>
+
+          </div>
+        </div>       
+      </div><br>
+      <!---até aqui-->
+
+     <!-- Copiar o codigo apartir daqui!-->
+      <div >
+        <div class="row"  id="t5">
+
+          <div class="col-lg-offset-2 col-lg-11">
+
+             <form id="survey-form" class="form-horizontal" action="#">
+ <div class="form-group  ">
+  <div class="row">
+    <div class=" col-lg-5">
+     <h3>Nome da Monitoria</h3>
+</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+      <h3>Monitor</h3>
+    </div>
+     <div class=" col-lg-offset-1 col-lg-3  ">
+      <h3>Professor</h3>
+     <!-- <h4>UNEAL</h4>!-->
+
+    </div>
+    
+</div>
+   <div class="row">
+    <div class="col-lg-2">
+      <h5>Nathalia Bernardo</h5>
+    </div>
+   <div class="col-lg-4">
+      <h5>Glauber Ferreira</h5>
+    </div>
+  </div>
+ 
+    <div class="row" style="overflow-x:auto;">
+      <div class=" col-lg-offset-3 col-lg-5">
+<h2>Horário</h2>
+  <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
+  <table class="table table-hover fontetabela">
+    <thead>
+      <tr class="fontetabela">
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>8:00/66</td>
+        <td>sem</td>
+      </tr>
+      <tr>
+        <td>10:00/71</td>
+        <td>10:00/66</td>
+        <td>10:00/71</td>
+        <td>10:00/71</td>
+        <td>sem</td>
+      </tr>
+      <tr>
+        <td>11:30/avulso</td>
+        <td>11:30/66</td>
+        <td>11:30/avulso</td>
+        <td>11:30/avulso</td>
+        <td>sem</td>
+      </tr>
+
+    </tbody>
+  </table>  
+       </div>
+      </div>
+
+                <hr style="background-color: black" class="col-lg-10">
+
+ <div class="row">
+     <div  class="col-sm-2">
+            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
+      </div>
+
+      <div class="col-sm-2">
+      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+    </div>
+
+    <div class="col-sm-2">
+<button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
+    </div>
+  </div>
+      </div>
+
+
+  </div>
+    
+   
+  </div>
+
+            
+    </div>
+
+  </div>
+  
+    </form>
+
+          </div>
+        </div>       
+      </div><br>
+      <!---até aqui-->
 <!-- Copiar o codigo apartir daqui!-->
-      <div  id="t3">
-        <div class="row">
+      <div >
+        <div class="row"  id="t6">
+
           <div class="col-lg-offset-2 col-lg-11">
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
   <div class="row">
     <div class=" col-lg-5">
-      <h3>Nome da Monitoria</h3>
-
+     <h3>Nome da Monitoria</h3>
+</div>
     </div>
   </div>
   <div class="row">
@@ -577,229 +924,8 @@ input[type=text], select, textarea {
     </div>
   </div>
  
-    <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5" style="overflow-x:auto;">
-<h2>Horário</h2>
-  <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
-  <table class="table table-hover fontetabela">
-    <thead>
-      <tr class="fontetabela">
-        <th>Segunda</th>
-        <th>Terça</th>
-        <th>Quarta</th>
-        <th>Quinta</th>
-        <th>Sexta</th>
-      </tr>
-    </thead>
-    <tbody >
-      <tr >
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>sem</td>
-      </tr>
-      <tr>
-        <td>10:00/71</td>
-        <td>10:00/66</td>
-        <td>10:00/71</td>
-        <td>10:00/71</td>
-        <td>sem</td>
-      </tr>
-      <tr>
-        <td>11:30/avulso</td>
-        <td>11:30/66</td>
-        <td>11:30/avulso</td>
-        <td>11:30/avulso</td>
-        <td>sem</td>
-      </tr>
-
-    </tbody>
-  </table>  
-       </div>
-      </div>
-      </div>
-
-
-                <hr style="background-color: black" class="col-lg-10">
-
- <div class="row">
-
-     <div  class="col-sm-2">
-            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      </div>
-
-      <div class="col-sm-2">
-      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
-    </div>
-
-    <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
-    </div>
-
-  </div>
-
-  </div>
-    
-   
-  </div>
-
-            
-    </div>
-
-  </div>
-  
-    </form>
-
-          </div>
-        </div>       
-      </div><br>
-      <!-- Até aqui!-->
-
-      <!-- Copiar o codigo apartir daqui!-->
-      <div  id="t4">
-        <div class="row">
-          <div class="col-lg-offset-2 col-lg-11" >
-
-             <form id="survey-form" class="form-horizontal" action="#">
- <div class="form-group  ">
-  <div class="row">
-    <div class=" col-lg-5">
-      <h3>Nome da Monitoria</h3>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-      <h3>Monitor</h3>
-    </div>
-     <div class=" col-lg-offset-1 col-lg-3  ">
-      <h3>Professor</h3>
-     <!-- <h4>UNEAL</h4>!-->
-
-    </div>
-    
-</div>
-   <div class="row">
-    <div class="col-lg-2">
-      <h5>Nathalia Bernardo</h5>
-    </div>
-   <div class="col-lg-4">
-      <h5>Glauber Ferreira</h5>
-    </div>
-  </div>
- 
-    <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5" style="overflow-x:auto;">
-<h2>Horário</h2>
-  <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
-  <table class="table table-hover fontetabela">
-    <thead>
-      <tr class="fontetabela">
-        <th>Segunda</th>
-        <th>Terça</th>
-        <th>Quarta</th>
-        <th>Quinta</th>
-        <th>Sexta</th>
-      </tr>
-    </thead>
-    <tbody >
-      <tr>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>sem</td>
-      </tr>
-      <tr>
-        <td>10:00/71</td>
-        <td>10:00/66</td>
-        <td>10:00/71</td>
-        <td>10:00/71</td>
-        <td>sem</td>
-      </tr>
-      <tr>
-        <td>11:30/avulso</td>
-        <td>11:30/66</td>
-        <td>11:30/avulso</td>
-        <td>11:30/avulso</td>
-        <td>sem</td>
-      </tr>
-
-    </tbody>
-  </table>  
-       </div>
-      </div>
-      </div>
-
-
-                <hr style="background-color: black" class="col-lg-10">
-
- <div class="row">
-    <div  class="col-sm-2">
-            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      </div>
-
-      <div class="col-sm-2">
-      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
-    </div>
-
-    <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
-    </div>
-  </div>
-  </div>
-    
-   
-  </div>
-
-            
-    </div>
-
-  </div>
-  
-    </form>
-
-          </div>
-        </div>       
-      </div><br>
-      <!-- Até aqui!-->
-
-      <!-- Copiar o codigo apartir daqui!-->
-      <div id="t5">
-        <div class="row">
-          <div class="col-lg-offset-2 col-lg-11" >
-
-             <form id="survey-form" class="form-horizontal" action="#">
- <div class="form-group  ">
-  <div class="row">
-    <div class=" col-lg-5">
-      <h3>Nome da Monitoria</h3>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-      <h3>Monitor</h3>
-    </div>
-     <div class=" col-lg-offset-1 col-lg-3  ">
-      <h3>Professor</h3>
-     <!-- <h4>UNEAL</h4>!-->
-
-    </div>
-    
-</div>
-   <div class="row">
-    <div class="col-lg-2">
-      <h5>Nathalia Bernardo</h5>
-    </div>
-   <div class="col-lg-4">
-      <h5>Glauber Ferreira</h5>
-    </div>
-  </div>
- 
-    <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5"style="overflow-x:auto;">
+    <div class="row" style="overflow-x:auto;">
+      <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -839,117 +965,6 @@ input[type=text], select, textarea {
   </table>  
        </div>
       </div>
-      </div>
-
-
-                <hr style="background-color: black" class="col-lg-10">
-
- <div class="row">
-    <div  class="col-sm-2">
-            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      </div>
-
-      <div class="col-sm-2">
-      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
-    </div>
-
-    <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
-    </div>
-  </div>
-  </div>
-    
-   
-  </div>
-
-            
-    </div>
-
-  </div>
-  
-    </form>
-
-          </div>
-        </div>       
-      </div><br>
-      <!-- Até aqui!-->
-
-      <!-- Copiar o codigo apartir daqui!-->
-      <div id="t1">
-        <div class="row">
-          <div class="col-lg-offset-2 col-lg-11" >
-
-             <form id="survey-form" class="form-horizontal" action="#">
- <div class="form-group  ">
-  <div class="row">
-    <div class=" col-lg-5">
-      <h3>Nome da Monitoria</h3>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-      <h3>Monitor</h3>
-    </div>
-     <div class=" col-lg-offset-1 col-lg-3  ">
-      <h3>Professor</h3>
-     <!-- <h4>UNEAL</h4>!-->
-
-    </div>
-    
-</div>
-   <div class="row">
-    <div class="col-lg-2">
-      <h5>Nathalia Bernardo</h5>
-    </div>
-   <div class="col-lg-4">
-      <h5>Glauber Ferreira</h5>
-    </div>
-  </div>
- 
-    <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5" style="overflow-x:auto;">
-<h2>Horário</h2>
-  <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
-  <table class="table table-hover fontetabela">
-    <thead>
-      <tr class="fontetabela">
-        <th>Segunda</th>
-        <th>Terça</th>
-        <th>Quarta</th>
-        <th>Quinta</th>
-        <th>Sexta</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>sem</td>
-      </tr>
-      <tr>
-        <td>10:00/71</td>
-        <td>10:00/66</td>
-        <td>10:00/71</td>
-        <td>10:00/71</td>
-        <td>sem</td>
-      </tr>
-      <tr>
-        <td>11:30/avulso</td>
-        <td>11:30/66</td>
-        <td>11:30/avulso</td>
-        <td>11:30/avulso</td>
-        <td>sem</td>
-      </tr>
-
-    </tbody>
-  </table>  
-       </div>
-      </div>
-      </div>
-
 
                 <hr style="background-color: black" class="col-lg-10">
 
@@ -963,9 +978,12 @@ input[type=text], select, textarea {
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
+      </div>
+
+
   </div>
     
    
@@ -981,117 +999,9 @@ input[type=text], select, textarea {
           </div>
         </div>       
       </div><br>
-<!-- Até aqui!-->
+      <!---até aqui-->
 
-
-      <!-- Copiar o codigo apartir daqui!-->
-      <div class="container-fluid" id="tPweb">
-        <div class="row">
-          <div class="col-lg-offset-2 col-lg-11">
-
-             <form id="survey-form" class="form-horizontal" action="#">
- <div class="form-group  ">
-  <div class="row">
-    <div class=" col-lg-5">
-      <h3>Nome da Monitoria</h3>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-      <h3>Monitor</h3>
-    </div>
-     <div class=" col-lg-offset-1 col-lg-3  ">
-      <h3>Professor</h3>
-     <!-- <h4>UNEAL</h4>!-->
-
-    </div>
-    
-</div>
-   <div class="row">
-    <div class="col-lg-2">
-      <h5>Nathalia Bernardo</h5>
-    </div>
-   <div class="col-lg-4">
-      <h5>Glauber Ferreira</h5>
-    </div>
-  </div>
- 
-    <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5"style="overflow-x:auto;">
-<h2>Horário</h2>
-  <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
-  <table class="table table-hover fontetabela">
-    <thead>
-      <tr class="fontetabela">
-        <th>Segunda</th>
-        <th>Terça</th>
-        <th>Quarta</th>
-        <th>Quinta</th>
-        <th>Sexta</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>8:00/66</td>
-        <td>sem</td>
-      </tr>
-      <tr>
-        <td>10:00/71</td>
-        <td>10:00/66</td>
-        <td>10:00/71</td>
-        <td>10:00/71</td>
-        <td>sem</td>
-      </tr>
-      <tr>
-        <td>11:30/avulso</td>
-        <td>11:30/66</td>
-        <td>11:30/avulso</td>
-        <td>11:30/avulso</td>
-        <td>sem</td>
-      </tr>
-
-    </tbody>
-  </table>  
-       </div>
-      </div>
-      </div>
-
-
-                <hr style="background-color: black" class="col-lg-10">
-
- <div class="row">
-     <div  class="col-sm-2">
-            <button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
-      </div>
-
-      <div class="col-sm-2">
-      <button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
-    </div>
-
-    <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
-    </div>
-  </div>
-  </div>
-    
-   
-  </div>
-
-            
-    </div>
-
-  </div>
-  
-    </form>
-
-          </div>
-        </div>       
-      </div><br>
-
+      <!-- Transição de pagina-->
       <div class="row">
         <div class=" col-lg-offset-5 col-lg-2">
         <ul class="pagination">
@@ -1103,16 +1013,19 @@ input[type=text], select, textarea {
         </ul> 
       </div>
       </div>
-
 <!-- Até aqui!-->
-
-
-
-
-
+<div class="container">
+<div class="row">
+  <div class="col-lg-4" style="color: white">
+    <button class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+  </div>
+</div>
+</div>
       <div class="row">
-            
-            <footer class="my-3 pt-5 text-muted  text-small text-center">
+          <footer class="my-3 pt-5 text-muted  text-small text-center">
        
               <div class="col-lg-offset-4 col-lg-4">
                 <!--Fundo do Slider-->
@@ -1150,10 +1063,9 @@ input[type=text], select, textarea {
   </div>
 </div>
 </div>
-
-
       </footer>
                 </div>
+
 
           <!--</div>-->
         </div>
@@ -1210,6 +1122,22 @@ function closeNav() {
 }
 </script>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
     <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Última versão JavaScript compilada e minificada -->
