@@ -153,6 +153,22 @@
 }
 
 
+ /* Entradas de estilo com type = "text", selecione elementos e textareas*/
+input[type=text], select, textarea {
+    width: 100%; /* Largura completa */
+    padding: 12px; /* Algum preenchimento */ 
+    border: 1px solid #ccc; /*Borda cinza */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Certifica se o preenchimento e a largura permanecem no lugar */
+    margin-top: 6px; /* Adicione uma margem superior */
+    margin-bottom: 16px; /* Margem inferior */
+    resize: vertical /* Permitir ao usuário redimensionar verticalmente a área de texto (não horizontalmente) */
+}
+
+
+/* Adiciona uma cor de fundo e algum preenchimento ao redor do formulário*/
+
+
   </style>
 
 </head>
@@ -263,10 +279,56 @@
 <!-- Fim da classe Modal2!-->
 
 
+<!-- Inicio da classe Moda3!-->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" >
+      <div class="modal-header" style="background-color: #FFD700;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"  id="myModalLabel" style="color:white">Preencha os campos corretamente</h4>
+      </div>
+      <div class="modal-body">
+        
+         <!-- Aqui começa o formulario de envio de questionamentos dos alunos para os professores-->
+      
+        <form action="#">
 
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nomeAluno" placeholder="Seu nome">
+          
+          <label for="turma">Turma</label>
+          <select id="turma" name="turma">
+            <option value="calouro">521</option>
+            <option value="BiCalouro">522</option>
+            <option value="QuaseVeterano">523</option>
+            <option value="Veterano">524</option>
+          </select>
+
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto">
+            <option value="duvida">Dúvida</option>
+            <option value="sugestão">Sugestão</option>
+          </select>
+          
+
+          <label for="subject">Descrição</label>
+          <textarea id="subject" name="subject" placeholder="Escreva aqui..." style="height:200px"></textarea>
+        </form>
+<!--aqui termina o formulario de questionamento-->
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-default btn-success btn-sm" data-dismiss="modal">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Fim da classe Moda3!-->
 
 <!-- Copiar o codigo apartir daqui!-->
-      <div class="container-fluid" id="t1">
+      <div  id="t1">
         <div class="row">
           <div class="col-lg-offset-2 col-lg-11">
 
@@ -298,7 +360,7 @@
     </div>
   </div>
  
-    <div class="row">
+    <div class="row" style="overflow-x:auto;">
       <div class=" col-lg-offset-3 col-lg-5">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
@@ -354,7 +416,7 @@
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -374,7 +436,7 @@
       </div><br>
 
 <!-- Copiar o codigo apartir daqui!-->
-     <div class="container-fluid" id="t2">
+     <div  id="t2">
         <div class="row">
           <div class="col-lg-offset-2 col-lg-11">
 
@@ -407,7 +469,7 @@
   </div>
  
     <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5">
+      <div class=" col-lg-offset-3 col-lg-5" style="overflow-x:auto;">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -462,7 +524,7 @@
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -483,7 +545,7 @@
 <!-- até aqui!-->
 
 <!-- Copiar o codigo apartir daqui!-->
-      <div class="container-fluid" id="t3">
+      <div  id="t3">
         <div class="row">
           <div class="col-lg-offset-2 col-lg-11">
 
@@ -516,7 +578,7 @@
   </div>
  
     <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5">
+      <div class=" col-lg-offset-3 col-lg-5" style="overflow-x:auto;">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -572,7 +634,7 @@
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
 
   </div>
@@ -595,9 +657,9 @@
       <!-- Até aqui!-->
 
       <!-- Copiar o codigo apartir daqui!-->
-      <div class="container-fluid" id="t4">
+      <div  id="t4">
         <div class="row">
-          <div class="col-lg-offset-2 col-lg-11">
+          <div class="col-lg-offset-2 col-lg-11" >
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
@@ -628,7 +690,7 @@
   </div>
  
     <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5">
+      <div class=" col-lg-offset-3 col-lg-5" style="overflow-x:auto;">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -683,7 +745,7 @@
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -704,9 +766,9 @@
       <!-- Até aqui!-->
 
       <!-- Copiar o codigo apartir daqui!-->
-      <div class="container-fluid" id="t5">
+      <div id="t5">
         <div class="row">
-          <div class="col-lg-offset-2 col-lg-11">
+          <div class="col-lg-offset-2 col-lg-11" >
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
@@ -737,7 +799,7 @@
   </div>
  
     <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5">
+      <div class=" col-lg-offset-3 col-lg-5"style="overflow-x:auto;">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -792,7 +854,7 @@
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -813,9 +875,9 @@
       <!-- Até aqui!-->
 
       <!-- Copiar o codigo apartir daqui!-->
-      <div class="container-fluid" id="t1">
+      <div id="t1">
         <div class="row">
-          <div class="col-lg-offset-2 col-lg-11">
+          <div class="col-lg-offset-2 col-lg-11" >
 
              <form id="survey-form" class="form-horizontal" action="#">
  <div class="form-group  ">
@@ -846,7 +908,7 @@
   </div>
  
     <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5">
+      <div class=" col-lg-offset-3 col-lg-5" style="overflow-x:auto;">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -901,7 +963,7 @@
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -956,7 +1018,7 @@
   </div>
  
     <div class="row">
-      <div class=" col-lg-offset-3 col-lg-5">
+      <div class=" col-lg-offset-3 col-lg-5"style="overflow-x:auto;">
 <h2>Horário</h2>
   <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>            
   <table class="table table-hover fontetabela">
@@ -1011,7 +1073,7 @@
     </div>
 
     <div class="col-sm-2">
-<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover">Enviar E-mail</button>
+<button type="button" class="btn info btn-sm button" title="Envie um E-mail ao seu monitor" data-toggle="popover" data-trigger="hover" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
     </div>
   </div>
   </div>
@@ -1043,6 +1105,11 @@
       </div>
 
 <!-- Até aqui!-->
+
+
+
+
+
       <div class="row">
             
             <footer class="my-3 pt-5 text-muted  text-small text-center">
