@@ -33,11 +33,11 @@
 		width: 0; /* 0 largura - alterar isso com JavaScript*/
 		position: fixed; /* fixar no lugar */
 		z-index: 1; /* fICAR NO TOPO */
-		top: 0; /* Ficar no topo*/
+		top: 20; /* Ficar no topo*/
 		left: 0;
 		background-color: #111; /* cor preta*/
 		overflow-x: hidden; /* disabilita o  horizontal scroll */
-		padding-top: 60px; /* Colocar  o conteúdo 60px a partir do topo */
+		padding-top: 80px; /* Colocar  o conteúdo 60px a partir do topo */
 		transition: 0.5s; /* 0.5 segundos de efeito de transição do slide sidenav */
 
 	}
@@ -137,14 +137,14 @@ body {
 }
 
 
-.button span {
+.button {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
 	transition: 0.5s;
 }
 
-.button span:after {
+.button:after {
 	content: '\00bb';
 	position: absolute;
 	opacity: 0;
@@ -268,6 +268,23 @@ input[type=text], select, textarea {
 	background-color: #666;
 	color: white;
 }
+
+/*Estilo dos Botões */
+.botaoMuda2{
+	border: none;
+	outline: none;
+	padding: 10px 16px;
+	background-color: #8B0000;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+/* Estilize a classe ativa e os botões ao passar o mouse */
+.ativa, .botaoMuda2:hover {
+	background-color:#8B0000;
+	color: white;
+}
+
 .cardTransicao {
   background-color: white;
   color: #FFD700;
@@ -276,10 +293,42 @@ input[type=text], select, textarea {
 }
 
 .cardTransicao:hover {opacity: 1}
-</style>
 
+/*Menu LateraL será colocado na próxima pagina*/
+.iconeMenuL {
+    width: 90px;
+    background-color: #555;
+}
+
+.iconeMenuL a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.inconeMenuL a:hover {
+    background-color: #000;
+}
+
+.ativaMenuLateral {
+    background-color: #FFD700 !important;
+}
+</style>
+<!--  a divi para a próxima pagina Bê
+<div class="iconeMenuL">
+  <a class="ativaMenuLateral" href="#"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-search"></i></a>
+  <a href="#"><i class="fa fa-envelope"></i></a>
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+-->
 </head>
 <body class="container" >
+
 	<div class="row">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
@@ -302,14 +351,16 @@ input[type=text], select, textarea {
 									<li><a href="#">Manhã</a></li>
 									<li><a href="#">Tarde</a></li>
 								</ul>
-								<li><a href="index.html" class="btn btn-danger" >Sair</a></li>
+								<li><a href="https://sigaa.ifal.edu.br/sigaa/verTelaLogin.do" class="fa fa-home botaoMuda"></a></li>
+								<li><a href="index.html" class=" botaoMuda2" >Sair </a></li>
+
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-	</div>
+	</div><br>
 
 	<div class="row" >
 		<div id="mySidenav" class="sidenav">
@@ -326,10 +377,6 @@ input[type=text], select, textarea {
 
 
 	</div><br>
-
-
-
-
 	<!-- Inicio da classe Modal!-->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
@@ -426,7 +473,7 @@ input[type=text], select, textarea {
 
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
-						<button type="button" class="btn btn-default btn-success btn-sm" data-dismiss="modal" data-toggle="modal" data-target="#myModal4">Enviar</button>
+						<button type="button" class="btn btn-default btn-success btn-sm " data-dismiss="modal" data-toggle="modal" data-target="#myModal4">Enviar</button>
 					</div>
 				</div>
 			</div>
@@ -1237,14 +1284,11 @@ function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 }
 </script>
-
 <script>
 var myVar;
-
 function myFunction() {
 	myVar = setTimeout(showPage, 3000);
 }
-
 function showPage() {
 	document.getElementById("loader").style.display = "none";
 	document.getElementById("myDiv").style.display = "block";
