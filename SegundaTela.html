@@ -37,7 +37,7 @@
 		left: 0;
 		background-color: #111; /* cor preta*/
 		overflow-x: hidden; /* disabilita o  horizontal scroll */
-		padding-top: 80px; /* Colocar  o conteúdo 60px a partir do topo */
+		padding-top: 60px; /* Colocar  o conteúdo 60px a partir do topo */
 		transition: 0.5s; /* 0.5 segundos de efeito de transição do slide sidenav */
 
 	}
@@ -60,7 +60,7 @@
 	/* Posicionar e estilizar o botão Fechar (canto superior direito) */
 	.sidenav .closebtn {
 		position: absolute;
-		top: 50px;
+		top: 20px;
 		right: 25px;
 		font-size: 36px;
 		margin-left: 50px;
@@ -85,7 +85,7 @@
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 }
-body {
+.fundo {
 	position: relative;
 	background-image: url("https://image.freepik.com/vetores-gratis/mao-icones-sobre-educacao-desenhado-em-um-fundo-preto_1306-141.jpg");
 	background-color: #cccccc;
@@ -273,7 +273,7 @@ input[type=text], select, textarea {
 .botaoMuda2{
 	border: none;
 	outline: none;
-	padding: 10px 16px;
+	padding: 5px 8px;
 	background-color: #8B0000;
 	cursor: pointer;
 	font-size: 18px;
@@ -285,6 +285,20 @@ input[type=text], select, textarea {
 	color: white;
 }
 
+.botaoMudaHome{
+	border: none;
+	outline: none;
+	padding: 10px 16px;
+	background-color: #FFD700;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+/* Estilize a classe ativa e os botões ao passar o mouse */
+.ativa, .botaoMudaHome:hover {
+	background-color:white;
+	color: white;
+}
 .cardTransicao {
   background-color: white;
   color: #FFD700;
@@ -294,40 +308,42 @@ input[type=text], select, textarea {
 
 .cardTransicao:hover {opacity: 1}
 
-/*Menu LateraL será colocado na próxima pagina*/
-.iconeMenuL {
-    width: 90px;
-    background-color: #555;
+/* Tes*/
+/* Create a column layout with Flexbox */
+
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border:1px solid #ddd;
 }
 
-.iconeMenuL a {
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.inconeMenuL a:hover {
-    background-color: #000;
+#myMenu li a {
+  backgrxound-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
 }
 
-.ativaMenuLateral {
-    background-color: #FFD700 !important;
+#myMenu li a:hover {
+  background-color: #eee;
 }
+
+
 </style>
-<!--  a divi para a próxima pagina Bê
-<div class="iconeMenuL">
-  <a class="ativaMenuLateral" href="#"><i class="fa fa-home"></i></a>
-  <a href="#"><i class="fa fa-search"></i></a>
-  <a href="#"><i class="fa fa-envelope"></i></a>
-  <a href="#"><i class="fa fa-globe"></i></a>
-  <a href="#"><i class="fa fa-trash"></i></a>
-</div>
--->
 </head>
-<body class="container" >
+<body class="container fundo" >
 
 	<div class="row">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -351,7 +367,7 @@ input[type=text], select, textarea {
 									<li><a href="#">Manhã</a></li>
 									<li><a href="#">Tarde</a></li>
 								</ul>
-								<li><a href="https://sigaa.ifal.edu.br/sigaa/verTelaLogin.do" class="fa fa-home botaoMuda"></a></li>
+								<li><a href="https://sigaa.ifal.edu.br/sigaa/verTelaLogin.do" class="fa fa-home botaoMudaHome"></a></li>
 								<li><a href="index.html" class=" botaoMuda2" >Sair </a></li>
 
 							</div>
@@ -364,6 +380,7 @@ input[type=text], select, textarea {
 
 	<div class="row" >
 		<div id="mySidenav" class="sidenav">
+			<input type="search" id="mySearch" onkeyup="myFunction()" placeholder="Buscar Monitoria" title="tipo de categoria">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="#t1">Algoritmo</a>
 			<a href="#t2">Android</a>
@@ -581,13 +598,16 @@ input[type=text], select, textarea {
 				<hr style="background-color: black" class="col-lg-10">
 
 				<div class="row">
+
 					<div  class="col-sm-2">
 						<button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal">Marcar Monitoria</button>
 					</div>
 
 					<div class="col-sm-2">
-						<button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+						<a href="Acervo.html" type="submit" class="btn info btn-sm button"  >Acessar Acervo</a>
+
 					</div>
+
 
 					<div class="col-sm-2">
 						<button type="button" class="btn info btn-sm button" data-toggle="modal" data-target="#myModal3">Enviar E-mail</button>
@@ -697,7 +717,7 @@ input[type=text], select, textarea {
 					</div>
 
 					<div class="col-sm-2">
-						<button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+						<a href="Acervo.html"type="button" class="btn info btn-sm button" >Acessar Acervo</a>
 					</div>
 
 					<div class="col-sm-2">
@@ -808,7 +828,7 @@ input[type=text], select, textarea {
 					</div>
 
 					<div class="col-sm-2">
-						<button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+						<a href="Acervo.html" type="button" class="btn info btn-sm button">Acessar Acervo</a>
 					</div>
 
 					<div class="col-sm-2">
@@ -918,7 +938,7 @@ input[type=text], select, textarea {
 					</div>
 
 					<div class="col-sm-2">
-						<button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+						<a href="Acervo.html" type="button" class="btn info btn-sm button" >Acessar Acervo</a>
 					</div>
 
 					<div class="col-sm-2">
@@ -1029,7 +1049,7 @@ input[type=text], select, textarea {
 					</div>
 
 					<div class="col-sm-2">
-						<button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+						<a href="Acervo.html" type="button" class="btn info btn-sm button" >Acessar Acervo</a>
 					</div>
 
 					<div class="col-sm-2">
@@ -1139,7 +1159,7 @@ input[type=text], select, textarea {
 					</div>
 
 					<div class="col-sm-2">
-						<button type="button" class="btn info btn-sm button" title="Atenção opção em Breve" data-toggle="popover" data-trigger="hover">Acessar Acervo</button>
+						<a href="Acervo.html"  type="button" class="btn info btn-sm button">Acessar Acervo</a>
 					</div>
 
 					<div class="col-sm-2">
@@ -1308,7 +1328,24 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script>
 
-
+<script>
+// função de pesquisa na barra de menu
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("mySearch");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myMenu");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
 <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Última versão JavaScript compilada e minificada -->

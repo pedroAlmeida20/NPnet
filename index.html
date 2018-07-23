@@ -3,167 +3,161 @@
 <head>
 	<title>Portal Monitoria</title>
 
-<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
-    <link rel="stylesheet" type="text/css" href="estiloRevisao.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
+	<link rel="stylesheet" type="text/css" href="estiloRevisao.css">
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 	<!-- Última versão CSS compilada e minificada -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Tema opcional -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	    <!-- HTML5 shim e Respond.js para suporte no IE8 de elementos HTML5 e media queries -->
-    <!-- ALERTA: Respond.js não funciona se você visualizar uma página file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-  .fcolor{
-    color:#000000;
-  }
-  .destaque{
-    color:#FFD700;
-  }
-  .fundo{
-    background-color:#F0F8FF;
-  }
-  .fundoDestaque{
-    background-color: #FFD700;
-  }
-  body {
-      position: relative;
-   background-image: url("https://www.webver.com.br/fundo.jpg");
-   background-color: #cccccc;
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- HTML5 shim e Respond.js para suporte no IE8 de elementos HTML5 e media queries -->
+	<!-- ALERTA: Respond.js não funciona se você visualizar uma página file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	.fcolor{
+		color:#000000;
+	}
+	.destaque{
+		color:#FFD700;
+	}
+	.fundo{
+		background-color:#F0F8FF;
+	}
+	.fundoDestaque{
+		background-color: #FFD700;
+	}
+	body {
+		position: relative;
+		background-image: url("https://www.webver.com.br/fundo.jpg");
+		background-color: #cccccc;
 
 
 
-  }
+	}
 </style>
 
 </head>
 <body class="fundo">
 
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content " >
-      <div class="modal-header fundoDestaque">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"  id="myModalLabel" style="color:white">Por favor fazer login</h4>
-      </div>
-      <div class="modal-body">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content " >
+				<div class="modal-header fundoDestaque">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title"  id="myModalLabel" style="color:white">Por favor fazer login</h4>
+				</div>
+				<div class="modal-body">
 
- <form action="SegundaTela.html">
-  <div class="form-group">
-    <label for="user" class="destaque">Usuário</label>
-    <input type="text" class="form-control" id="user" placeholder="exemplo123" required>
-  </div>
-  <div class="form-group">
-    <label for="pwd" class="destaque">Senha</label>
-    <input type="password" class="form-control" id="pwd" placeholder="*********" required>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox"> Lembrar de mim</label>
-  </div>
-  <button type="submit" class="btn btn-default btn-warning" >Entrar</button>
-</form>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
-
-
-
-<div class="container "><br><br><br><br><br><br>
-
-<div class="row ">
-	<div class="col-sm-offset-3 col-sm-6 " style="background-color: #C0C0C0">
-
-	<div class="row " >
-		<div class="col-sm-4">
-        <img  src="http://mexcustomer.com/wp-content/uploads/2017/07/icone-monitoria-4.png" alt="" height="70" >
-    </div>
-    <div class="col-sm-8 ">
-          <h1 id="title" class="destaque">Portal Monitoria</h1>
-          </div>
-    </div>
-
-
-	<div class="row">
-	<div style="background-color: white" class=" col-sm-12">
+					<form action="SegundaTela.html">
+						<div class="form-group">
+							<label for="user" class="destaque">Usuário</label>
+							<input type="text" class="form-control" id="user" placeholder="exemplo123" required>
+						</div>
+						<div class="form-group">
+							<label for="pwd" class="destaque">Senha</label>
+							<input type="password" class="form-control" id="pwd" placeholder="*********" required>
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox"> Lembrar de mim</label>
+						</div>
+						<button type="submit" class="btn btn-default btn-warning" >Entrar</button>
+					</form>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancelar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
-</div>
+	<div class="container "><br><br><br><br><br><br>
+
+		<div class="row ">
+			<div class="col-sm-offset-3 col-sm-6 " style="background-color: #C0C0C0">
+
+				<div class="row " >
+					<div class="col-sm-4">
+						<img  src="http://mexcustomer.com/wp-content/uploads/2017/07/icone-monitoria-4.png" alt="" height="70" >
+					</div>
+					<div class="col-sm-8 ">
+						<h1 id="title" class="destaque">Portal Monitoria</h1>
+					</div>
+				</div>
 
 
-	<br>
-		<div class="text-center">
-  <button type="submit" class="btn btn-default btn-warning"  data-toggle="modal" data-target="#myModal">Acessar Monitoria</button>
+				<div class="row">
+					<div style="background-color: white" class=" col-sm-12">
+					</div>
 
-          <hr style="background-color:#767976" >
-
-    </div>
-			<div class="row">
-				<div class="col-sm-12" >
+				</div>
 
 
-          	<footer class="my-3 pt-5 text-muted  text-small text-center">
-        <ul class="list-inline">
-          <li class="list-inline-item"> Desenvolvido por - <a href="#" class="fcolor">NPnet</a></li>
+				<br>
+				<div class="text-center">
+					<button type="submit" class="btn btn-default btn-warning"  data-toggle="modal" data-target="#myModal">Acessar Monitoria</button>
 
-        </ul>
+					<hr style="background-color:#767976" >
 
-      </footer>
+				</div>
+				<div class="row">
+					<div class="col-sm-12" >
 
-        </div>
-    </div>
-    </div>
-    <!-- Principal JavaScript do Bootstrap
-    ================================================== -->
-    <!-- Foi colocado no final para a página carregar mais rápido -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
-    <script src="../../../../assets/js/vendor/holder.min.js"></script>
-    <script>
-      // Exemplo de JavaScript para desativar o envio do formulário, se tiver algum campo inválido.
-      (function() {
-        'use strict';
 
-        window.addEventListener('load', function() {
-          // Selecione todos os campos que nós queremos aplicar estilos Bootstrap de validação customizados.
-          var forms = document.getElementsByClassName('needs-validation');
+						<footer class="my-3 pt-5 text-muted  text-small text-center">
+							<ul class="list-inline">
+								<li class="list-inline-item"> Desenvolvido por - <a href="#" class="fcolor">NPnet</a></li>
 
-          // Faz um loop neles e previne envio
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
-    <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Última versão JavaScript compilada e minificada -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</div>
-</body>
-</html>
+							</ul>
+
+						</footer>
+
+					</div>
+				</div>
+			</div>
+			<!-- Principal JavaScript do Bootstrap
+			================================================== -->
+			<!-- Foi colocado no final para a página carregar mais rápido -->
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+			<script src="../../../../assets/js/vendor/popper.min.js"></script>
+			<script src="../../../../dist/js/bootstrap.min.js"></script>
+			<script src="../../../../assets/js/vendor/holder.min.js"></script>
+			<script>
+			// Exemplo de JavaScript para desativar o envio do formulário, se tiver algum campo inválido.
+			(function() {
+				'use strict';
+
+				window.addEventListener('load', function() {
+					// Selecione todos os campos que nós queremos aplicar estilos Bootstrap de validação customizados.
+					var forms = document.getElementsByClassName('needs-validation');
+
+					// Faz um loop neles e previne envio
+					var validation = Array.prototype.filter.call(forms, function(form) {
+						form.addEventListener('submit', function(event) {
+							if (form.checkValidity() === false) {
+								event.preventDefault();
+								event.stopPropagation();
+							}
+							form.classList.add('was-validated');
+						}, false);
+					});
+				}, false);
+			})();
+			</script>
+			<!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<!-- Última versão JavaScript compilada e minificada -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		</div>
+	</body>
+	</html>
