@@ -84,7 +84,7 @@ body {margin:0}
 	padding: 0 16px;
 }
 
-.container {
+.container2 {
 	background-color: #f2f2f2;
 	padding: 5px 20px 15px 20px;
 	border: 1px solid lightgrey;
@@ -131,11 +131,11 @@ label {
 }
 
 .btn:hover {
-	background-color: #45a049;
+	background-color: #FFD700;
 }
 
 a {
-	color: #2196F3;
+	color: white;
 }
 
 hr {
@@ -147,6 +147,78 @@ hr {
 	}
 
 }
+
+
+
+/* Modal (plano de fundo) */
+.modal {
+	display: none; /* Escondido por padrão */
+	position: fixed; /* Fique no lugar*/
+	z-index: 1; /* fique no topo */
+	padding-top: 100px; /* Localização da caixa */
+	left: 0;
+	top: 0;
+	width: 100%; /* Largura completa*/
+	height: 100%; /* Altura toda */
+	overflow: auto; /* Ativar a rolagem, se necessário*/
+	background-color: rgb(0,0,0); /* Cor de retorno */
+	background-color: rgba(0,0,0,0.4); /* Preto com opacidade */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #FFD700;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+/* O botão Fechar */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*Altera Menu*/
+.tablink {
+	background-color: black;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	width: 25%;
+}
+
+.tablink:hover {
+	background-color: #777;
+}
+
+/* Estilizar o conteúdo da guia */
+.tabcontent {
+	color: black;
+	display: none;
+	padding: 50px;
+	text-align: center;
+}
+
+#Infor {padding-top:80px;height:500px;background-color:red;}
+#Arquivos{padding-top:80px;height:500px;background-color:green;}
+#Agendado {padding-top:80px;height:500px;background-color:blue;}
+#HoraEmSala {padding-top:80px;height:500px;background-color:orange;}
+
 </style>
 <body class="fundo">
 
@@ -159,99 +231,195 @@ hr {
 			<a href="#"><i class="fa fa-trash"></i></a>
 		</div>
 
-		<div class="tamanho">
-			<div class="container">
-				<form id="survey-form" class="form-horizontal" action="#">
-					<div class="form-group  ">
-						<div class="row">
-							<div class=" col-lg-5">
-								<h3>Nome da Monitoria</h3>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-1">
-							<h3>Monitor</h3>
-						</div>
-						<div class=" col-lg-offset-1 col-lg-3  ">
-							<h3>Professor</h3>
-						</div>
 
-					</div>
-					<div class="row">
-						<div class="col-lg-2">
-							<h5>Nathalia Bernardo</h5>
-						</div>
-						<div class="col-lg-4">
-							<h5>Glauber Ferreira</h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-2">
-							<h6>E-mail: <a>nathy@ifal.edu.br</a></h6>
-						</div>
-						<div class="col-lg-4">
-							<h6>E-mail: <a>glauber@ifal.edu.br</a></h6>
-						</div>
-					</div>
 
-<!--Inicio de formulario de agendamento-->
-					<div>
-					<form action="#">
-						<div class="row">
-							<div class="col-sm-6">
-								<h3>Dados do Aluno</h3>
-								<label for="nome"><i class="fa fa-user"></i> Nome</label>
-								<input type="text" id="nome" name="nomeUser" placeholder="Pedro Almeida">
-								<label for="email"><i class="fa fa-envelope"></i> Email</label>
-								<input type="text" id="email" name="email" placeholder="aluno@example.com">
-								<label for="cidade"><i class="fa fa-institution"></i> Cidade</label>
-								<input type="text" id="city" name="city" placeholder="Palmeira dos Índios">
-							</div>
-							<div class="col-sm-6">
-								<h3>Dados de Agendamento</h3>
-								<div class="col-sm-12">
-									<label for="turma">Turma</label>
-									<select id="turma" name="selecaoTurma">
-										<option value="vazio">Selecione</option>
-										<option value="calouro">521</option>
-										<option value="BiCalouro">522</option>
-										<option value="QuaseVeterano">523</option>
-										<option value="Veterano">524</option>
-									</select>
-									<label for="cel">Número de Celular</label>
-									<input type="text" id="cel" name="telefone" placeholder="9 1245-6789">
-									<label for="expmonth">Dia da monitoria</label>
-									<input type="date" id="data" name="data" placeholder="01/01/2018">
-									<div class="row">
-										<div class="col-sm-6">
-											<label for="turno">Turno</label>
-											<select id="turno" name="selecaoTurno">
-												<option value="manha">Matutino</option>
-												<option value="tarde">Vespertino</option>
-											</select>
-											<div class="col-sm-6">
-												<label for="hora">Horário</label>
-												<input type="time" id="hora" name="hora" placeholder="8:00">
-											</div>
-										</div>
+		<!-- Modal -->
+		<div id="modalAgendamento" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content" style="background-color:#FFD700;">
+				<span class="close">&times;</span>
+				<div class="tamanho">
+					<div class="container2">
+						<form id="survey-form" class="form-horizontal" action="#">
+							<div class="form-group  ">
+								<div class="row">
+									<div class=" col-lg-5">
+										<h3>Nome da Monitoria</h3>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-offset-10">
-								<input type="submit" value="Cadastrar Monitoria" class="btn">
+							<div class="row">
+								<div class="col-lg-1">
+									<h3>Monitor</h3>
+								</div>
+								<div class=" col-lg-offset-1 col-lg-3  ">
+									<h3>Professor</h3>
+								</div>
+
 							</div>
-						</form>
+							<div class="row">
+								<div class="col-lg-2">
+									<h5>Nathalia Bernardo</h5>
+								</div>
+								<div class="col-lg-4">
+									<h5>Glauber Ferreira</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-2">
+									<h6>E-mail: <a>nathy@ifal.edu.br</a></h6>
+								</div>
+								<div class="col-lg-4">
+									<h6>E-mail: <a>glauber@ifal.edu.br</a></h6>
+								</div>
+							</div>
+
+							<!--Inicio de formulario de agendamento-->
+							<div>
+								<form action="#">
+									<div class="row">
+										<div class="col-sm-6">
+											<h3>Dados do Aluno</h3>
+											<label for="nome"><i class="fa fa-user"></i> Nome</label>
+											<input type="text" id="nome" name="nomeUser" placeholder="Aluno Júnior">
+											<label for="email"><i class="fa fa-envelope"></i> Email</label>
+											<input type="text" id="email" name="email" placeholder="aluno@exemplo.com">
+											<label for="cel">Número de Celular</label>
+											<input type="text" id="cel" name="telefone" placeholder="9 1245-6789">
+											<label for="cidade"><i class="fa fa-institution"></i> Cidade</label>
+											<input type="text" id="city" name="city" placeholder="Palmeira dos Índios">
+										</div>
+										<div class="col-sm-6">
+											<h3>Dados de Agendamento</h3>
+											<div class="col-sm-12">
+												<label for="turma">Turma</label>
+												<select id="turma" name="selecaoTurma">
+													<option value="vazio">Selecione</option>
+													<option value="calouro">521</option>
+													<option value="BiCalouro">522</option>
+													<option value="QuaseVeterano">523</option>
+													<option value="Veterano">524</option>
+												</select>
+												<label for="expmonth">Dia da monitoria</label>
+												<input type="date" id="data" name="data" placeholder="01/01/2018">
+												<div class="row">
+													<div class="col-sm-6">
+														<label for="turno">Turno</label>
+														<select id="turno" name="selecaoTurno">
+															<option value="manha">Matutino</option>
+															<option value="tarde">Vespertino</option>
+														</select>
+														<div class="col-sm-6">
+															<label for="hora">Horário</label>
+															<input type="time" id="hora" name="hora" placeholder="8:00">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-offset-10">
+											<input type="submit" value="Agendar Monitoria" class="btn">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="container">
+					<div class="col-sm-offset-1 col-sm-12">
+					<div  id="Infor"class=" tabcontent">
+						<h1>Teste</h1>
+						<p>Estou testando isso</p>
+					</div>
+
+					<div id="Arquivos" class="tabcontent">
+						<h1>Teste</h1>
+						<p>Estou testando isso</p>				</div>
+
+					<div id="Agendado" class="tabcontent">
+						<h1>Teste</h1>
+						<p>Estou testando isso</p>
+					</div>
+
+					<div id="HoraEmSala" class="tabcontent">
+						<h1>Teste</h1>
+						<p>Estou testando isso</p>
 					</div>
 				</div>
-				<!--Fim de formulario de agendamento-->
+			</div>
+			</div>
+		</div>
+
+		<!-- teste-->
+
+		<div class="container">
+			<button class="tablink" onclick="openCity('Infor', this, 'red')" id="defaultOpen">Informações</button>
+			<button class="tablink" onclick="openCity('Arquivos', this, 'green')">Arquivos</button>
+			<button class="tablink" onclick="openCity('Agendado', this, 'blue')">Agendado</button>
+			<button class="tablink" onclick="openCity('HoraEmSala', this, 'orange')">Horario em Sala</button>
+			<div class="col-sm-offset-10 col-sm-2">
+				<button id="botaoModal" class="btn " style="background-color:#FFD700;">Agendar monitoria</button>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Abrir  Modal -->
 
 
+	<script>
+	//Obtenha o modal
+	var modal = document.getElementById('modalAgendamento');
 
-		<!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!-- Última versão JavaScript compilada e minificada -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	// Receba o botão que abre o modal
+	var btn = document.getElementById("botaoModal");
 
-	</body>
-	</html>
+	// Obtenha o elemento <span> que fecha o modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// Quando o usuário clica no botão, abra o modal
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+
+	// Quando o usuário clica em <span> (x), feche o modal
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	// Quando o usuário clica em qualquer lugar fora do modal, feche-o
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+</script>
+<script>
+function openCity(cityName,elmnt,color) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablink");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].style.backgroundColor = "";
+	}
+	document.getElementById(cityName).style.display = "block";
+	elmnt.style.backgroundColor = color;
+
+}
+</script>
+
+<!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Última versão JavaScript compilada e minificada -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
