@@ -136,7 +136,7 @@ label {
 }
 
 a {
-	color: white;
+	color:red;
 }
 
 hr {
@@ -223,11 +223,50 @@ body, html {
     height: 100%;
 }
 
-#Info {background-color: #00F5FF;}
+#Info {background-color: #FFD700;}
 #Arq {background-color: #FFD700;}
-#Agendado {background-color: blue;}
-#Horas {background-color: orange;}
+#Agendado {background-color:#FFD700;}
+#Horas {background-color: #FFD700;}
 
+
+
+/* Style the links inside the sidenav */
+#mySidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+    top: 20px;
+    background-color: #4CAF50;
+}
+
+#blog {
+    top: 80px;
+    background-color: #2196F3; /* Blue */
+}
+
+#projects {
+    top: 140px;
+    background-color: #f44336; /* Red */
+}
+
+#contact {
+    top: 200px;
+    background-color: #555 /* Light Black */
+}
 </style>
 <body class="fundo">
 
@@ -238,6 +277,8 @@ body, html {
 			<a href="#"><i class="fa fa-envelope"></i></a>
 			<a href="#"><i class="fa fa-globe"></i></a>
 			<a href="#"><i class="fa fa-trash"></i></a>
+			<a href="SegundaTela.html"><i class="glyphicon glyphicon-off"></i></a>
+
 		</div>
 
 
@@ -338,14 +379,15 @@ body, html {
 
 			</div>
 			<div class="col-sm-10">
-	<button class="tablink" onclick="openPage('Info', this, '#00F5FF')" id="defaultOpen">Informações</button>
+	<button class="tablink" onclick="openPage('Info', this, '#FFD700')" id="defaultOpen">Informações</button>
 	<button class="tablink" onclick="openPage('Arq', this, '#FFD700')" >Arquivos</button>
-	<button class="tablink" onclick="openPage('Agendado', this, 'blue')">Agendado</button>
-	<button class="tablink" onclick="openPage('Horas', this, 'orange')">Horario em Aula</button>
+	<button class="tablink" onclick="openPage('Agendado', this, '#FFD700')">Agendado</button>
+	<button class="tablink" onclick="openPage('Horas', this, '#FFD700')">Horario em Aula</button>
 
 	<div id="Info" class="tabcontent">
 		<h3>Estou testando</h3>
 		<p>Esrtou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
+
 		<div class="form-group  ">
 			<div class="row">
 				<div class=" col-lg-5">
