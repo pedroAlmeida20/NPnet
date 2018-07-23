@@ -28,6 +28,7 @@
 </head>
 <style>
 
+
 .fundo {
 	position: relative;
 	background-image: url("https://image.freepik.com/vetores-gratis/mao-icones-sobre-educacao-desenhado-em-um-fundo-preto_1306-141.jpg");
@@ -190,34 +191,42 @@ hr {
 }
 
 /*Altera Menu*/
+/* Ajuste a altura do corpo e o documento para 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Links da guia Estilo */
 .tablink {
-	background-color: black;
-	color: white;
-	float: left;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 14px 16px;
-	font-size: 17px;
-	width: 25%;
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
 }
 
 .tablink:hover {
-	background-color: #777;
+    background-color: #777;
 }
 
-/* Estilizar o conteúdo da guia */
+/* Estilize o conteúdo da guia (e adicione a altura: 100% para o conteúdo de página inteira) */
 .tabcontent {
-	color: black;
-	display: none;
-	padding: 50px;
-	text-align: center;
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
 }
 
-#Infor {padding-top:80px;height:500px;background-color:red;}
-#Arquivos{padding-top:80px;height:500px;background-color:green;}
-#Agendado {padding-top:80px;height:500px;background-color:blue;}
-#HoraEmSala {padding-top:80px;height:500px;background-color:orange;}
+#Info {background-color: #00F5FF;}
+#Arq {background-color: #FFD700;}
+#Agendado {background-color: blue;}
+#Horas {background-color: orange;}
 
 </style>
 <body class="fundo">
@@ -240,7 +249,6 @@ hr {
 				<span class="close">&times;</span>
 				<div class="tamanho">
 					<div class="container2">
-						<form id="survey-form" class="form-horizontal" action="#">
 							<div class="form-group  ">
 								<div class="row">
 									<div class=" col-lg-5">
@@ -329,43 +337,107 @@ hr {
 				</div>
 
 			</div>
+			<div class="col-sm-10">
+	<button class="tablink" onclick="openPage('Info', this, '#00F5FF')" id="defaultOpen">Informações</button>
+	<button class="tablink" onclick="openPage('Arq', this, '#FFD700')" >Arquivos</button>
+	<button class="tablink" onclick="openPage('Agendado', this, 'blue')">Agendado</button>
+	<button class="tablink" onclick="openPage('Horas', this, 'orange')">Horario em Aula</button>
+
+	<div id="Info" class="tabcontent">
+		<h3>Estou testando</h3>
+		<p>Esrtou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
+		<div class="form-group  ">
 			<div class="row">
-				<div class="container">
-					<div class="col-sm-offset-1 col-sm-12">
-					<div  id="Infor"class=" tabcontent">
-						<h1>Teste</h1>
-						<p>Estou testando isso</p>
-					</div>
-
-					<div id="Arquivos" class="tabcontent">
-						<h1>Teste</h1>
-						<p>Estou testando isso</p>				</div>
-
-					<div id="Agendado" class="tabcontent">
-						<h1>Teste</h1>
-						<p>Estou testando isso</p>
-					</div>
-
-					<div id="HoraEmSala" class="tabcontent">
-						<h1>Teste</h1>
-						<p>Estou testando isso</p>
-					</div>
+				<div class=" col-lg-5">
+					<h3>Nome da Monitoria</h3>
 				</div>
 			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-1">
+				<h3>Monitor</h3>
+			</div>
+			<div class=" col-lg-offset-1 col-lg-3  ">
+				<h3>Professor</h3>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-lg-2">
+				<h5>Nathalia Bernardo</h5>
+			</div>
+			<div class="col-lg-4">
+				<h5>Glauber Ferreira</h5>
 			</div>
 		</div>
-
-		<!-- teste-->
-
-		<div class="container">
-			<button class="tablink" onclick="openCity('Infor', this, 'red')" id="defaultOpen">Informações</button>
-			<button class="tablink" onclick="openCity('Arquivos', this, 'green')">Arquivos</button>
-			<button class="tablink" onclick="openCity('Agendado', this, 'blue')">Agendado</button>
-			<button class="tablink" onclick="openCity('HoraEmSala', this, 'orange')">Horario em Sala</button>
-			<div class="col-sm-offset-10 col-sm-2">
-				<button id="botaoModal" class="btn " style="background-color:#FFD700;">Agendar monitoria</button>
+		<div class="row">
+			<div class="col-lg-2">
+				<h6>E-mail: <a>nathy@ifal.edu.br</a></h6>
+			</div>
+			<div class="col-lg-4">
+				<h6>E-mail: <a>glauber@ifal.edu.br</a></h6>
 			</div>
 		</div>
+	</div>
+
+	<div id="Arq" class="tabcontent">
+		<h3>Estou testando</h3>
+		<p>Esrtou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
+		<button id="botaoModal" class="btn">agendar monitoria</button>
+
+	</div>
+
+	<div id="Agendado" class="tabcontent">
+		<h3>Estou testando</h3>
+	 <p>Estou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
+	 <div class="row" style="overflow-x:auto;">
+		 <div class=" col-lg-offset-3 col-lg-5">
+			 <h2>Horário</h2>
+			 <p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>
+			 <table class="table table-hover fontetabela">
+				 <thead>
+					 <tr class="fontetabela">
+						 <th>Segunda</th>
+						 <th>Terça</th>
+						 <th>Quarta</th>
+						 <th>Quinta</th>
+						 <th>Sexta</th>
+					 </tr>
+				 </thead>
+				 <tbody>
+					 <tr>
+						 <td>8:00/66</td>
+						 <td>8:00/66</td>
+						 <td>8:00/66</td>
+						 <td>8:00/66</td>
+						 <td>sem</td>
+					 </tr>
+					 <tr>
+						 <td>10:00/71</td>
+						 <td>10:00/66</td>
+						 <td>10:00/71</td>
+						 <td>10:00/71</td>
+						 <td>sem</td>
+					 </tr>
+					 <tr>
+						 <td>11:30/avulso</td>
+						 <td>11:30/66</td>
+						 <td>11:30/avulso</td>
+						 <td>11:30/avulso</td>
+						 <td>sem</td>
+					 </tr>
+
+				 </tbody>
+			 </table>
+		 </div>
+	 </div>
+	</div>
+
+	<div id="Horas" class="tabcontent">
+	  <h3>Estou testando</h3>
+	  <p>Esrtou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
+	</div>
+
 
 	</div>
 
@@ -400,20 +472,21 @@ hr {
 	}
 </script>
 <script>
-function openCity(cityName,elmnt,color) {
-	var i, tabcontent, tablinks;
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = "none";
-	}
-	tablinks = document.getElementsByClassName("tablink");
-	for (i = 0; i < tablinks.length; i++) {
-		tablinks[i].style.backgroundColor = "";
-	}
-	document.getElementById(cityName).style.display = "block";
-	elmnt.style.backgroundColor = color;
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
 
 }
+document.getElementById("defaultOpen").click();
 </script>
 
 <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
