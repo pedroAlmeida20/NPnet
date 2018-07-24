@@ -8,11 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
 	<link rel="stylesheet" type="text/css" href="estiloRevisao.css">
-
+	<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<!-- Última versão CSS compilada e minificada -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Tema opcional -->
@@ -300,10 +299,10 @@ input[type=text], select, textarea {
 	color: white;
 }
 .cardTransicao {
-  background-color: white;
-  color: #FFD700;
-  opacity: 0.8;
-  transition: 0.3s;
+	background-color: white;
+	color: #FFD700;
+	opacity: 0.8;
+	transition: 0.3s;
 }
 
 .cardTransicao:hover {opacity: 1}
@@ -314,32 +313,75 @@ input[type=text], select, textarea {
 
 /* Style the search box */
 #mySearch {
-  width: 100%;
-  font-size: 18px;
-  padding: 11px;
-  border:1px solid #ddd;
+	width: 100%;
+	font-size: 18px;
+	padding: 11px;
+	border:1px solid #ddd;
 }
 
 /* Style the navigation menu inside the left column */
 #myMenu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
 #myMenu li a {
-  backgrxound-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
+	backgrxound-color: #f6f6f6;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block
 }
 
 #myMenu li a:hover {
-  background-color: #eee;
+	background-color: #eee;
 }
 
+.dropbtn {
+	background-color: #3498DB;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 
 </style>
 </head>
@@ -362,17 +404,19 @@ input[type=text], select, textarea {
 						<ul class="nav navbar-nav">
 							<li><a href="#"  data-toggle="modal" data-target="#myModal2">Oque é Monitoria?</a></li>
 							<li><a href="Regulamento%20do%20Corpo%20Discente%20do%20IFAL.pdf">Normas</a></li>
-							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Horario<span class="caret"></span></a>
+								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cogs"></i><span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Manhã</a></li>
-									<li><a href="#">Tarde</a></li>
+									<li><a href="index.html"><i class="fas fa-power-off"></i> Sair</a></li>
+									<li><a href="https://sigaa.ifal.edu.br/sigaa/verTelaLogin.do"><i class="fas fa-door-open"></i> SIGAA</a></li>
 								</ul>
-								<li><a href="https://sigaa.ifal.edu.br/sigaa/verTelaLogin.do" class="fa fa-home botaoMudaHome"></a></li>
-								<li><a href="index.html" class=" glyphicon glyphicon-off" style="background-color:red" ></a></li>
 
-							</div>
-						</li>
-					</ul>
+								</div>
+
+							</li>
+
+						</ul>
+
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -1331,19 +1375,39 @@ for (var i = 0; i < btns.length; i++) {
 <script>
 // função de pesquisa na barra de menu
 function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("mySearch");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myMenu");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
+	var input, filter, ul, li, a, i;
+	input = document.getElementById("mySearch");
+	filter = input.value.toUpperCase();
+	ul = document.getElementById("myMenu");
+	li = ul.getElementsByTagName("li");
+	for (i = 0; i < li.length; i++) {
+		a = li[i].getElementsByTagName("a")[0];
+		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			li[i].style.display = "";
+		} else {
+			li[i].style.display = "none";
+		}
+	}
+}
+/* Quando o usuário clica no botão,
+alternar entre esconder e mostrar o conteúdo suspenso */
+function myFunction() {
+	document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Feche o menu suspenso se o usuário clicar fora dele
+window.onclick = function(event) {
+	if (!event.target.matches('.dropbtn')) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+	}
 }
 </script>
 <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
