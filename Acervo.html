@@ -103,7 +103,7 @@ label {
 }
 
 a {
-	color:red;
+	color:BLACK;
 }
 
 hr {
@@ -227,6 +227,21 @@ hr {
     text-align: left;
   }
 }
+
+/*estilo da tabela Arquivos*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
 </style>
 <body class="fundo container-fluid">
 	<div class="topnav" id="myTopnav">
@@ -244,8 +259,44 @@ hr {
 	</div>
 
 	<div id="Arq" class="tabcontent">
-		<h3>Estou testando</h3>
-		<p>Esrtou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
+		<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>PDF</th>
+      <th>MDF</th>
+      <th>SLIDE</th>
+			<th>VIDEOS</th>
+			<th>SITES</th>
+
+    </tr>
+    <tr>
+      <td><a href="#"><i class="fas fa-file-download"></i> exercicio1.pdf</a></td>
+      <td><a href="#"><i class="fas fa-file-download"></i> projeto.mdf</a></td>
+      <td><a href="#"><i class="fas fa-file-download"></i> Aula1.pptx</a></td>
+			<td><a href="#"><i class="fas fa-download"></i> tutorial</a></td>
+			<td><a href="#">estudo.com.br</a></td>
+
+
+
+    </tr>
+    <tr>
+			<td><a href="#"><i class="fas fa-file-download"></i> Lista.pdf</a></td>
+      <td><a href="#"><i class="fas fa-file-download"></i> projeto2.mdf</a></td>
+      <td><a href="#"><i class="fas fa-file-download"></i> Aula2.pptx</a></td>
+			<td><a href="#"><i class="fas fa-download"></i> resolvendo exercicio</a></td>
+			<td><a href="#">mesalva.com.br</a></td>
+
+    </tr>
+    <tr>
+			<td><a href="#"><i class="fas fa-file-download"></i> ListaExercicio.pdf</a></td>
+			<td><a href="#"><i class="fas fa-file-download"></i> projeto3.mdf</a></td>
+			<td><a href="#"><i class="fas fa-file-download"></i> Aula3.pptx</a></td>
+			<td><a href="#"><i class="fas fa-download"></i>revisao</a></td>
+			<td><a href="#">soescola.com.br</a></td>
+
+    </tr>
+  </table>
+</div>
 
 	</div>
 
@@ -256,9 +307,54 @@ hr {
 	</div>
 
 	<div id="Horas" class="tabcontent">
-		<h3>Estou testando</h3>
-		<p>Esrtou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
-	</div>
+					<div class="row" style="overflow-x:auto;">
+						<div class=" col-sm-offset-3 col-sm-5">
+							<h2>Horário</h2>
+							<p>Conferir a seguir os dias e horas disponivei para sua monitoria</p>
+							<table class="table table-hover fontetabela">
+								<thead>
+									<tr class="fontetabela">
+										<th>Segunda</th>
+										<th>Terça</th>
+										<th>Quarta</th>
+										<th>Quinta</th>
+										<th>Sexta</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>8:00/66</td>
+										<td>8:00/66</td>
+										<td>8:00/66</td>
+										<td>8:00/66</td>
+										<td>sem</td>
+									</tr>
+									<tr>
+										<td>10:00/71</td>
+										<td>10:00/66</td>
+										<td>10:00/71</td>
+										<td>10:00/71</td>
+										<td>sem</td>
+									</tr>
+									<tr>
+										<td>11:30/avulso</td>
+										<td>11:30/66</td>
+										<td>11:30/avulso</td>
+										<td>11:30/avulso</td>
+										<td>sem</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+
+
+			</div>
+
+
+		</div>
 
 
 
