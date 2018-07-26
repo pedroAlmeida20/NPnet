@@ -354,14 +354,14 @@ input[type=text], select, textarea {
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand destaque" href="#"  onclick="openNav()" data-toggle="tooltip" title="Clique em mim!">Portal Monitoria</a>
+					<a class="navbar-brand destaque" href="#"  onclick="openNav()" data-toggle="tooltip" title="Clique em mim!"><i class="fas fa-bars"></i> Portal Monitoria</a>
 
 				</div>
 				<div>
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav">
-							<li><a href="#"  data-toggle="modal" data-target="#myModal2">Oque é Monitoria?</a></li>
-							<li><a href="Regulamento%20do%20Corpo%20Discente%20do%20IFAL.pdf">Normas</a></li>
+							<li><a href="#"  data-toggle="modal" data-target="#myModal2"><i class="far fa-question-circle"></i> O que é Monitoria?</a></li>
+							<li><a href="Regulamento%20do%20Corpo%20Discente%20do%20IFAL.pdf"><i class="fas fa-book"></i> Normas</a></li>
 								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cogs"></i><span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li ><a href="index.html"><i class="fas fa-power-off" ></i> Sair</a></li>
@@ -398,7 +398,7 @@ input[type=text], select, textarea {
 	</div><br>
 	<!-- Inicio da classe Modal!-->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
+		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content" >
 				<div class="modal-header" style="background-color: #FFD700;">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -406,10 +406,61 @@ input[type=text], select, textarea {
 				</div>
 				<div class="modal-body">
 
-					<h1>Aqui será adcionado o Formulario Bê</h1>
+					<div>
+						<form action="#">
+							<div class="row">
+								<div class="col-sm-6">
+									<h3>Dados do Aluno</h3>
+									<label for="nome"><i class="fa fa-user"></i> Nome</label>
+									<input type="text" id="nome" name="nomeUser" placeholder="Aluno Júnior">
+									<label for="email"><i class="fa fa-envelope"></i> Email</label>
+									<input type="text" id="email" name="email" placeholder="aluno@exemplo.com">
+									<label for="cel">Número de Celular</label>
+									<input type="text" id="cel" name="telefone" placeholder="9 1245-6789">
+									<label for="cidade"><i class="fas fa-university"></i> Cidade</label>
+									<input type="text" id="city" name="city" placeholder="Palmeira dos Índios">
+								</div>
+								<div class="col-sm-6">
+									<h3>Dados de Agendamento</h3>
+									<div class="col-sm-12">
+										<label for="turma">Turma</label>
+										<select id="turma" name="selecaoTurma">
+											<option value="vazio">Selecione</option>
+											<option value="calouro">521</option>
+											<option value="BiCalouro">522</option>
+											<option value="QuaseVeterano">523</option>
+											<option value="Veterano">524</option>
+										</select>
+										<label for="expmonth">Dia da monitoria</label>
+										<input type="date" id="data" name="data" placeholder="01/01/2018">
+										<div class="row">
+											<div class="col-sm-6">
+												<label for="turno">Turno</label>
+												<select id="turno" name="selecaoTurno">
+													<option value="manha">Matutino</option>
+													<option value="tarde">Vespertino</option>
+												</select>
+												<div class="col-sm-6">
+													<label for="hora">Horário </label>
+													<input type="time" id="hora" name="hora"  placeholder="8:00">
+												</div>
+											</div>
+										</div><br>
+										<div class="row">
+											<div class="col-sm-12">
+												<label for="subject">Dúvida</label>
+												<textarea id="subject" name="subject" placeholder="Escreva aqui as suas dúvidas..." style="height:150px"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default btn-info" data-dismiss="modal">Cadastrar</button>
-						<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancelar</button>
+						<button type="button" class="btn btn-default btn-success" data-dismiss="modal"><i class="far fa-calendar-check"></i> Agendar Monitoria</button>
+						<button type="button" class="btn btn-default btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Cancelar</button>
 					</div>
 				</div>
 			</div>
@@ -1216,9 +1267,9 @@ input[type=text], select, textarea {
 					<p class="title">CEO & Fundador</p>
 					<p>Instituto Federal</p>
 					<div style="margin: 24px 0;">
-						<a class="linkCard" href="https://www.instagram.com/almeida_p20/"><i class="fa fa-instagram"></i></a>
-						<a class="linkCard" href="https://www.linkedin.com/in/pedro-almeida-858b73142/"><i class="fa fa-linkedin"></i></a>
-						<a class="linkCard" href="https://www.facebook.com/pedro.almeida.96199344"><i class="fa fa-facebook"></i></a>
+						<a class="linkCard" href="https://www.instagram.com/almeida_p20/"><i class="fab fa-instagram"></i></a>
+						<a class="linkCard" href="https://www.linkedin.com/in/pedro-almeida-858b73142/"><i class="fab fa-linkedin-in"></i></a>
+						<a class="linkCard" href="https://www.facebook.com/pedro.almeida.96199344"><i class="fab fa-facebook-f"></i></a>
 					</div>
 					<p><button class="buttonCard">Contato</button></p>
 				</div>
@@ -1235,9 +1286,9 @@ input[type=text], select, textarea {
 						<p class="title">CEO & Fundador</p>
 						<p>Instituto Federal</p>
 						<div style="margin: 24px 0;">
-							<a class="linkCard" href="https://www.instagram.com/_nathaliabernardo/"><i class="fa fa-instagram"></i></a>
-							<a class="linkCard" href="#"><i class="fa fa-linkedin"></i></a>
-							<a class="linkCard" href="https://www.facebook.com/nathalia.bernardo.31521"><i class="fa fa-facebook"></i></a>
+							<a class="linkCard" href="https://www.instagram.com/_nathaliabernardo/"><i class="fab fa-instagram"></i></a>
+							<a class="linkCard" href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a class="linkCard" href="https://www.facebook.com/nathalia.bernardo.31521"><i class="fab fa-facebook-f"></i></a>
 						</div>
 						<p><button class="buttonCard">Contato</button></p>
 					</div>
