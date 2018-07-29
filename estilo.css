@@ -1,0 +1,421 @@
+<style>
+/* A seguir estão as orientações de todo o estilo q eu fiz, valeu professor por me fazer ficar até as  00:00 horas fazendo isso*/
+
+.sidenav {
+  height: 100%; /* 100% Altura toda */
+  width: 0; /* 0 largura - alterar isso com JavaScript*/
+  position: fixed; /* fixar no lugar */
+  z-index: 1; /* fICAR NO TOPO */
+  top: 20; /* Ficar no topo*/
+  left: 0;
+  background-color: #111; /* cor preta*/
+  overflow-x: hidden; /* disabilita o  horizontal scroll */
+  padding-top: 60px; /* Colocar  o conteúdo 60px a partir do topo */
+  transition: 0.5s; /* 0.5 segundos de efeito de transição do slide sidenav */
+
+}
+
+
+
+/*Quando eu passar o mouse sobre os links de navegação, mudará de cor*/
+
+/* Posicionar e estilizar o botão Fechar (canto superior direito) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.destaque{
+  border-color:#FFD700;
+  font-size:30px;
+  cursor:pointer
+}
+}
+.fundoDestaque{
+background-color: #FFD700;
+}
+.fontetabela{
+color:black;
+}
+
+
+/* Em telas menores, nas quais a altura é menor que 450 px, devo alterar o estilo do sidenav (menos preenchimento e um tamanho de fonte menor)*/
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+.fundo {
+position: relative;
+background-image: url("https://image.freepik.com/vetores-gratis/mao-icones-sobre-educacao-desenhado-em-um-fundo-preto_1306-141.jpg");
+background-color: #cccccc;
+
+
+}
+
+#t1 {padding-top:30px;height:600px;color: #fff; background-color: #1E88E5;}
+#t2 {padding-top:30px;height:600px;color: #fff; background-color: #673ab7;}
+#t3 {padding-top:30px;height:600px;color: #fff; background-color: #ff9800;}
+#t4 {padding-top:30px;height:600px;color: #fff; background-color: #00bcd4;}
+#t5 {padding-top:30px;height:600px;color: #fff; background-color: #858cd4;}
+#t6 {padding-top:30px;height:600px;color: #fff; background-color: #009688;}
+
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+/* mudar cor de botão abaixo da tabela*/
+
+.info {
+border-color: white;
+color: blue
+}
+
+/*transição*/
+.info:hover {
+background: white;
+color: blue;
+}
+
+/
+/*Card de contato*/
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+max-width: 300px;
+margin: auto;
+text-align: center;
+font-family: arial;
+}
+
+.title {
+color: grey;
+font-size: 18px;
+}
+.buttonCard {
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #000;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+}
+.buttonCard:hover {
+opacity: 0.9;
+background-color:#FFD700;
+}
+
+.linkCard {
+text-decoration: none;
+font-size: 22px;
+color: black;
+}
+/* Entradas de estilo com type = "text", selecione elementos e textareas, formulario de envio de msg*/
+input[type=text], select, textarea {
+width: 100%; /* Largura completa */
+padding: 12px; /* Algum preenchimento */
+border: 1px solid #ccc; /*Borda cinza */
+border-radius: 4px; /* Bordas arredondadas */
+box-sizing: border-box; /* Certifica se o preenchimento e a largura permanecem no lugar */
+margin-top: 6px; /* Adicione uma margem superior */
+margin-bottom: 16px; /* Margem inferior */
+resize: vertical /* Permitir ao usuário redimensionar verticalmente a área de texto (não horizontalmente) */
+}
+
+
+
+
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+position: relative;
+-webkit-animation-name: animatebottom;
+-webkit-animation-duration: 1s;
+animation-name: animatebottom;
+animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+from { bottom:-100px; opacity:0 }
+to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+from{ bottom:-100px; opacity:0 }
+to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+display: none;
+text-align: center;
+}
+
+
+/*Estilo dos Botões */
+.botaoMuda{
+border: none;
+outline: none;
+padding: 10px 16px;
+background-color: #f1f1f1;
+cursor: pointer;
+font-size: 18px;
+}
+
+/* Estilize a classe ativa e os botões ao passar o mouse */
+.ativa, .botaoMuda:hover {
+background-color: #666;
+color: white;
+}
+
+/*Estilo dos Botões */
+.botaoMuda2{
+border: none;
+outline: none;
+padding: 5px 8px;
+background-color: #8B0000;
+cursor: pointer;
+font-size: 18px;
+}
+
+/* Estilize a classe ativa e os botões ao passar o mouse */
+.ativa, .botaoMuda2:hover {
+background-color:#8B0000;
+color: white;
+}
+
+.botaoMudaHome{
+border: none;
+outline: none;
+padding: 10px 16px;
+background-color: #FFD700;
+cursor: pointer;
+font-size: 18px;
+}
+
+/* Estilize a classe ativa e os botões ao passar o mouse */
+.ativa, .botaoMudaHome:hover {
+background-color:white;
+color: white;
+}
+.cardTransicao {
+background-color: white;
+color: #FFD700;
+opacity: 0.8;
+transition: 0.3s;
+}
+
+.cardTransicao:hover {opacity: 1}
+
+/* Tes*/
+/* Create a column layout with Flexbox */
+
+
+/* Style the search box */
+#mySearch {
+width: 100%;
+font-size: 18px;
+padding: 11px;
+border:1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+#myMenu li a {
+backgrxound-color: #f6f6f6;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+color: black;
+display: block
+}
+
+#myMenu li a:hover {
+background-color: #eee;
+}
+
+
+
+
+
+
+.destaque{
+	color:#FFD700;
+}
+.fundo {
+	position: relative;
+	background-image: url("https://image.freepik.com/vetores-gratis/mao-icones-sobre-educacao-desenhado-em-um-fundo-preto_1306-141.jpg");
+	background-color: #cccccc;
+}
+.row {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+	margin: 0 -16px;
+}
+
+
+.tamanho {
+	-ms-flex: 75%; /* IE10 */
+	flex: 75%;
+}
+
+
+.tamanho {
+	padding: 0 16px;
+}
+
+.container2 {
+	background-color: #f2f2f2;
+	padding: 5px 20px 15px 20px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+}
+
+.icon-container {
+	margin-bottom: 20px;
+	padding: 7px 0;
+	font-size: 24px;
+}
+
+.btn:hover {
+	background-color: blue;
+}
+
+a {
+	color:BLACK;
+}
+
+hr {
+	border: 1px solid lightgrey;
+}
+@media (max-width: 800px) {
+	.row {
+		flex-direction: column-reverse;
+	}
+
+}
+
+/* Links da guia Estilo */
+.tablink {
+	background-color: #555;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	width: 25%;
+}
+
+.tablink:hover {
+	background-color: #777;
+}
+
+/* Estilize o conteúdo da guia (e adicione a altura: 100% para o conteúdo de página inteira) */
+.tabcontent {
+	color: black;
+	display: none;
+	padding: 100px 20px;
+	height: 100%;
+}
+
+#Info {opacity: 0.9;background-color: white;}
+#Arq {opacity: 0.9;background-color: white;}
+#Agendado {opacity: 0.95;background-color:white;}
+#Horas {opacity: 0.9;background-color: white;}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+}
+
+.topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.active {
+	background-color: orange;
+	color: white;
+}
+
+.topnav .icon {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {display: none;}
+	.topnav a.icon {
+		float: right;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.topnav.responsive {position: relative;}
+	.topnav.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}
+
+/*estilo da tabela Arquivos*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: 1px solid #ddd;
+}
+
+td {
+	text-align: left;
+	padding: 8px;
+}
+th {
+	text-align: center;
+	padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+</style>
