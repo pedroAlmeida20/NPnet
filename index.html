@@ -48,20 +48,20 @@
 </head>
 <body class="fundo">
 
-<!--Inicio do primeiro modal-->
+<!--Inicio do Principal modal-->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content " >
 				<div class="modal-header fundoDestaque">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title"  id="myModalLabel" style="color:white">Por favor fazer login</h4>
+					<h4 class="modal-title"  id="myModalLabel" style="color:white">Escolha qual Prioridade irá querer acessar</h4>
 				</div>
 				<div class="modal-body">
 					<div class="text-center">
 						<br><br><br>
-						<button type="submit" class="btn btn-default btn-info"  data-toggle="modal" data-target="#modal2">Acessar Como Professor</button>
+						<button type="submit" class="btn btn-default btn-info"  data-toggle="modal" data-target="#modal1">Acessar Como Professor</button>
 						<button type="submit" class="btn btn-default btn-info"  data-toggle="modal" data-target="#modal2">Acessar Como Monitor</button>
-						<button type="submit" class="btn btn-default btn-info"  data-toggle="modal" data-target="#modal2">Acessar Como Aluno</button>
+						<button type="submit" class="btn btn-default btn-info"  data-toggle="modal" data-target="#modal3">Acessar Como Aluno</button>
 
 					</div>
 					<div class="modal-footer">
@@ -71,8 +71,40 @@
 			</div>
 		</div>
 	</div>
-	<!--Fim do primeiro modal-->
+	<!--Fim do Principal modal-->
 
+	<!--Inicio do Primeiro modal-->
+		<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content " >
+					<div class="modal-header fundoDestaque">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title"  id="myModalLabel" style="color:white">Login Professor</h4>
+					</div>
+					<div class="modal-body">
+
+						<form action="SegundaTela.html">
+							<div class="form-group">
+								<label for="user" class="destaque">Usuário</label>
+								<input type="text" class="form-control" id="user" placeholder="exemplo123" required>
+							</div>
+							<div class="form-group">
+								<label for="pwd" class="destaque">Senha</label>
+								<input type="password" class="form-control" id="pwd" placeholder="*********" required>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox"> Lembrar de mim</label>
+							</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-default btn-success" >Entrar</button>
+						</div>
+					</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Fim do Primeiro modal-->
 
 	<!--Inicio do Segundo modal-->
 		<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -80,7 +112,7 @@
 				<div class="modal-content " >
 					<div class="modal-header fundoDestaque">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title"  id="myModalLabel" style="color:white">Por favor fazer login</h4>
+						<h4 class="modal-title"  id="myModalLabel" style="color:white">Login Monitor</h4>
 					</div>
 					<div class="modal-body">
 
@@ -106,6 +138,39 @@
 			</div>
 		</div>
 		<!--Fim do Segundo modal-->
+
+		<!--Inicio do Terceiro modal-->
+			<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content " >
+						<div class="modal-header fundoDestaque">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title"  id="myModalLabel" style="color:white">Login Aluno</h4>
+						</div>
+						<div class="modal-body">
+
+							<form action="SegundaTela.html">
+								<div class="form-group">
+									<label for="user" class="destaque">Usuário</label>
+									<input type="text" class="form-control" id="user" placeholder="exemplo123" required>
+								</div>
+								<div class="form-group">
+									<label for="pwd" class="destaque">Senha</label>
+									<input type="password" class="form-control" id="pwd" placeholder="*********" required>
+								</div>
+								<div class="checkbox">
+									<label><input type="checkbox"> Lembrar de mim</label>
+								</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-default btn-success" >Entrar</button>
+							</div>
+						</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Fim do Terceiro modal-->
 
 	<div class="container "><br><br><br><br><br><br>
 
