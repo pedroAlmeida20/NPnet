@@ -40,120 +40,88 @@
 			<i class="fa fa-bars"></i>
 		</a>
 	</div>
-	<!-- Inicio da classe Modal!-->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog modal-lg" role="document">
+	<!-- Inicio da classe Modal Monitoria de Algoritmo!-->
+	<div class="modal fade" id="modalMonitoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
 			<div class="modal-content" >
 				<div class="modal-header" style="background-color: #FFD700;">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title"  id="myModalLabel" style="color:white">Por favor insira os dados corretamente</h4>
+					<h4 class="modal-title"  id="myModalLabel" style="color:white">Algoritmo</h4>
 				</div>
 				<div class="modal-body">
 
 					<div>
-						<div class="row">
-							<div class=" col-lg-5">
-								<h3>Nome da Monitoria</h3>
-							</div>
-						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-1">
 							<h3>Monitor</h3>
 						</div>
-						<div class=" col-lg-offset-1 col-lg-3  ">
+						<div class=" col-lg-offset-4 col-lg-3  ">
 							<h3>Professor</h3>
 						</div>
 
 					</div>
 					<div class="row">
-						<div class="col-lg-2">
-							<h5>Nathalia Bernardo</h5>
+						<div class="col-lg-3">
+							<h5>Emanuelle Melo</h5>
 						</div>
-						<div class="col-lg-4">
-							<h5>Glauber Ferreira</h5>
+						<div class="col-sm-offset-2 col-lg-4">
+							<h5>Emerson Lima</h5>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-2">
-							<h6>E-mail: <a>nathy@ifal.edu.br</a></h6>
+							<h6>E-mail: <a>emanuelleMelo@ifal.edu.br</a></h6>
 						</div>
-						<div class="col-lg-4">
-							<h6>E-mail: <a>glauber@ifal.edu.br</a></h6>
+						<div class="col-sm-offset-3 col-lg-4">
+							<h6>E-mail: <a>emersonLimar@ifal.edu.br</a></h6>
 						</div>
 					</div>
 					<form action="#">
 						<div class="row">
-							<div class="col-sm-6">
-								<h3>Dados do Aluno</h3>
-								<label for="nome"><i class="fa fa-user"></i> Nome</label>
-								<input type="text" id="nome" name="nomeUser" placeholder="Aluno Júnior">
-								<label for="email"><i class="fa fa-envelope"></i> Email</label>
-								<input type="text" id="email" name="email" placeholder="aluno@exemplo.com">
-								<label for="cel">Número de Celular</label>
-								<input type="text" id="cel" name="telefone" placeholder="9 1245-6789">
-								<label for="cidade"><i class="fas fa-university"></i> Cidade</label>
-								<input type="text" id="city" name="city" placeholder="Palmeira dos Índios">
-							</div>
-							<div class="col-sm-6">
-								<h3>Dados de Agendamento</h3>
-								<div class="col-sm-12">
-									<label for="turma">Turma</label>
-									<select id="turma" name="selecaoTurma">
-										<option value="vazio">Selecione</option>
-										<option value="calouro">521</option>
-										<option value="BiCalouro">522</option>
-										<option value="QuaseVeterano">523</option>
-										<option value="Veterano">524</option>
-									</select>
+							<div class="col-sm-12">
+								<h3 class="text-center">Dados de Agendamento</h3>
+								<div class="col-sm-3">
 									<label for="expmonth">Dia da monitoria</label>
+
 									<input type="date" id="data" name="data" placeholder="01/01/2018">
-									<div class="row">
-										<div class="col-sm-6">
-											<label for="turno">Turno</label>
-											<select id="turno" name="selecaoTurno">
-												<option value="manha">Matutino</option>
-												<option value="tarde">Vespertino</option>
-											</select>
-											<div class="col-sm-6">
-												<label for="hora">Horário </label>
-												<input type="time" id="hora" name="hora"  placeholder="8:00">
-											</div>
-										</div>
-									</div><br>
-									<div class="row">
-										<div class="col-sm-12">
-											<label for="subject">Dúvida</label>
-											<textarea id="subject" name="subject" placeholder="Escreva aqui as suas dúvidas..." style="height:150px"></textarea>
-										</div>
+								</div>
+								<div class="col-sm-offset-1 col-sm-2">
+									<label for="hora">Horário </label>
+
+									<input type="time" id="hora" name="hora"  placeholder="8:00">
+								</div>
+							</div>
+						</div>
+
+								<br>
+								<br>
+
+								<div class="row">
+									<div class="col-sm-1">
+										<label for="subject">Dúvida</label>
+									</div>
+									<div class="col-sm-12">
+										<textarea id="subject" name="subject" placeholder="Escreva aqui as suas dúvidas..." style="height:150px; width:500px"></textarea>
 									</div>
 								</div>
 							</div>
-						</form>
-					</div>
-				</div>
-
-				<div class="modal-footer">
-					<div class="row">
-						<div class="col-sm-offset-8 col-sm-4">
-							<button type="button" class="btn " data-dismiss="modal"><i class="far fa-calendar-check"></i> Agendar Monitoria</button>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default btn-success" data-dismiss="modal"><i class="far fa-calendar-check"></i> Agendar Monitoria</button>
+								<button type="button" class="btn btn-default btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Cancelar</button>
+							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-sm-offset-8 col-sm-4">
-						<button type="button" class="btn " data-dismiss="modal"><i class="far fa-times-circle"></i> Cancelar</button>
-					</div>
 				</div>
-					</div>
+						</div>
+					</form>
 				</div>
-			</div>
-		</div>
 
-		<!-- Fim da classe Modal!-->
+	<!-- Fim da classe Modal da Monitoria de Algortimo!-->
 
 		<div id="Info" class="tabcontent">
 			<h3>Estou testando</h3>
-			<p>Esrtou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
+			<p>Estou colocando essas cores para que eu possa ter ideia de espaçamento.</p>
 		</div>
 
 		<div id="Arq" class="tabcontent">
@@ -342,113 +310,11 @@
 			<hr><br>
 
 			<br>
-			<!-- Inicio da classe Modal!-->
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content" >
-						<div class="modal-header" style="background-color: #FFD700;">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title"  id="myModalLabel" style="color:white">Por favor insira os dados corretamente</h4>
-						</div>
-						<div class="modal-body">
-
-							<div>
-								<div class="row">
-									<div class=" col-lg-5">
-										<h3>Nome da Monitoria</h3>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-1">
-									<h3>Monitor</h3>
-								</div>
-								<div class=" col-lg-offset-1 col-lg-3  ">
-									<h3>Professor</h3>
-								</div>
-
-							</div>
-							<div class="row">
-								<div class="col-lg-2">
-									<h5>Nathalia Bernardo</h5>
-								</div>
-								<div class="col-lg-4">
-									<h5>Glauber Ferreira</h5>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-2">
-									<h6>E-mail: <a>nathy@ifal.edu.br</a></h6>
-								</div>
-								<div class="col-lg-4">
-									<h6>E-mail: <a>glauber@ifal.edu.br</a></h6>
-								</div>
-							</div>
-							<form action="#">
-								<div class="row">
-									<div class="col-sm-6">
-										<h3>Dados do Aluno</h3>
-										<label for="nome"><i class="fa fa-user"></i> Nome</label>
-										<input type="text" id="nome" name="nomeUser" placeholder="Aluno Júnior">
-										<label for="email"><i class="fa fa-envelope"></i> Email</label>
-										<input type="text" id="email" name="email" placeholder="aluno@exemplo.com">
-										<label for="cel">Número de Celular</label>
-										<input type="text" id="cel" name="telefone" placeholder="9 1245-6789">
-										<label for="cidade"><i class="fas fa-university"></i> Cidade</label>
-										<input type="text" id="city" name="city" placeholder="Palmeira dos Índios">
-									</div>
-									<div class="col-sm-6">
-										<h3>Dados de Agendamento</h3>
-										<div class="col-sm-12">
-											<label for="turma">Turma</label>
-											<select id="turma" name="selecaoTurma">
-												<option value="vazio">Selecione</option>
-												<option value="calouro">521</option>
-												<option value="BiCalouro">522</option>
-												<option value="QuaseVeterano">523</option>
-												<option value="Veterano">524</option>
-											</select>
-											<label for="expmonth">Dia da monitoria</label>
-											<input type="date" id="data" name="data" placeholder="01/01/2018">
-											<div class="row">
-												<div class="col-sm-6">
-													<label for="turno">Turno</label>
-													<select id="turno" name="selecaoTurno">
-														<option value="manha">Matutino</option>
-														<option value="tarde">Vespertino</option>
-													</select>
-													<div class="col-sm-6">
-														<label for="hora">Horário </label>
-														<input type="time" id="hora" name="hora"  placeholder="8:00">
-													</div>
-												</div>
-											</div><br>
-											<div class="row">
-												<div class="col-sm-12">
-													<label for="subject">Dúvida</label>
-													<textarea id="subject" name="subject" placeholder="Escreva aqui as suas dúvidas..." style="height:150px"></textarea>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default btn-success" data-dismiss="modal"><i class="far fa-calendar-check"></i> Agendar Monitoria</button>
-							<button type="button" class="btn btn-default btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Cancelar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Fim da classe Modal!-->
 
 			<hr style="background-color:black">
 			<div class="row">
 				<div class="col-sm-offset-10 col-sm-2">
-					<button data-toggle="modal" data-target="#myModal">Agendar Monitoria</button>
+					<button data-toggle="modal" data-target="#modalMonitoria" class="btn btn-primary">Agendar Monitoria</button>
 				</div>
 			</div>
 		</div>

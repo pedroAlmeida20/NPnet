@@ -252,15 +252,7 @@ input[type=text], select, textarea {
 }
 
 
-/*Estilo dos Botões */
-.botaoMuda{
-	border: none;
-	outline: none;
-	padding: 10px 16px;
-	background-color: #f1f1f1;
-	cursor: pointer;
-	font-size: 18px;
-}
+
 
 /* Estilize a classe ativa e os botões ao passar o mouse */
 .ativa, .botaoMuda:hover {
@@ -344,6 +336,50 @@ input[type=text], select, textarea {
 </style>
 </head>
 <body class="container fundo" >
+	<!-- Inicio da classe Modal contato!-->
+	<div class="modal fade" id="modalContato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content" >
+				<div class="modal-header" style="background-color: #FFD700;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title"  id="myModalLabel" style="color:white">Entre em Contato com os Desenvolvedores</h4>
+				</div>
+				<div class="modal-body">
+
+					<div>
+					<form action="#">
+						<div class="row">
+							<div class="col-sm-12">
+								<h3>Dados do Usuário</h3>
+								<label for="nome"><i class="fa fa-user"></i> Nome</label>
+								<input type="text" id="nome" name="nomeUser" placeholder="Aluno Júnior">
+								<label for="email"><i class="fa fa-envelope"></i> Email</label>
+								<input type="text" id="email" name="email" placeholder="aluno@exemplo.com">
+								<label for="cel">Número de Celular</label>
+								<input type="text" id="cel" name="telefone" placeholder="9 1245-6789">
+								<label for="cidade"><i class="fas fa-university"></i> Cidade</label>
+								<input type="text" id="city" name="city" placeholder="Palmeira dos Índios">
+							</div>
+									<div class="row">
+										<div class="col-sm-offset-1 col-sm-10">
+											<label for="subject">Assunto</label>
+											<textarea id="subject" name="subject" placeholder="Escreva aqui sua Mensagem..." style="height:150px"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-success" data-dismiss="modal"><i class="far fa-calendar-check"></i>Enviar Mensagem</button>
+						<button type="button" class="btn btn-default btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Cancelar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Fim da classe Modal contato!-->
 
 	<div class="row">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -1272,7 +1308,7 @@ input[type=text], select, textarea {
 						<a class="linkCard" href="https://www.linkedin.com/in/pedro-almeida-858b73142/"><i class="fab fa-linkedin-in"></i></a>
 						<a class="linkCard" href="https://www.facebook.com/pedro.almeida.96199344"><i class="fab fa-facebook-f"></i></a>
 					</div>
-					<p><button class="buttonCard">Contato</button></p>
+					<p><button class="buttonCard" data-toggle="modal" data-target="#modalContato">Contato</button></p>
 				</div>
 			</div>
 		</div>
@@ -1291,7 +1327,7 @@ input[type=text], select, textarea {
 							<a class="linkCard" href="#"><i class="fab fa-linkedin-in"></i></a>
 							<a class="linkCard" href="https://www.facebook.com/nathalia.bernardo.31521"><i class="fab fa-facebook-f"></i></a>
 						</div>
-						<p><button class="buttonCard">Contato</button></p>
+						<p><button class="buttonCard" data-toggle="modal" data-target="#modalContato">Contato</button></p>
 					</div>
 				</div>
 			</div>
