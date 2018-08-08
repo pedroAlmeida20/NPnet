@@ -28,10 +28,38 @@
   }
 
   .fundo {
-  	position: relative;
-  	background-image: url("https://image.freepik.com/vetores-gratis/mao-icones-sobre-educacao-desenhado-em-um-fundo-preto_1306-141.jpg");
-  	background-color: #cccccc;
+    position: relative;
+    background-image: url("https://image.freepik.com/vetores-gratis/mao-icones-sobre-educacao-desenhado-em-um-fundo-preto_1306-141.jpg");
+    background-color: #cccccc;
   }
+
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .collapsible:hover {
+    background-color: #FFD700;
+  }
+
+  .contenti {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  .responsive {
+    max-width: 100%;
+    height: 200px;
+  }
+
 </style>
 </head>
 <body class="fundo">
@@ -55,7 +83,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-              <li><a href="AcessoProfessorAgenda.html" ><i class="far fa-calendar-alt"></i> Agenda</a></li>
+            <li><a href="AcessoProfessorAgenda.html" ><i class="far fa-calendar-alt"></i> Agenda</a></li>
             <li><a href="AcessoProfessorRegimento.html"><i class="fas fa-book"></i> Regimento</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-chalkboard-teacher"></i> Monitoria <span class="caret"></span></a>
@@ -93,44 +121,306 @@
       </div><!-- /.container-fluid -->
     </nav>
   </div>
+  <div class="container responsive">
+    <div class="row">
+      <div class="col-xs-12" >
+        <div style="background-color:white;">
+          <button class="collapsible" style="text-align:center;">Regimento da Instituição</button>
+          <div class="contenti">
+            <a href="MANUALDOESTUDANTE2018.pdf.pdf">Regimento</a>
+          </div>
+          <button class="collapsible"  style="text-align:center;">Regimento do Professor</button>
+          <div class="contenti">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <button class="collapsible"  style="text-align:center;">Regimento do Aluno</button>
+          <div class="contenti">
+            <div class="row">
+              <div class="col-xs-offset-8">
+                <button class="btn btn-info"><a href="MANUALDOESTUDANTE2018.pdf.pdf">Manual do Aluno Completo</a><button>
+                </div>
+            </div>
+            <div class="row">
+            <h4>Reitor</h4>
+            <p>Sergio Teixeira Costa
+            Pró-Reitor de Pesquisa e Inovação
+            Carlos Henrique Almeida Alves
+            Pró-Reitor de Extensão
+            Altemir João Sêcco
+            Pró-Reitor de Administração e Planejamento
+            Welington Spencer
+            Pró-Reitor de Ensino
+            Luiz Henrique de Gouvêa Lemos
+            Pró-Reitor de Desenvolvimento Institucional
+            Carlos Guedes de Lacerda
+            Diretora Geral do Campus Maceió
+            Jeane Maria de Melo
+            Diretora de Ensino do Campus Maceió
+            Gisele Fernandes Loures</p>
 
-  <div class="row" id="inicio">
-    <div class="container-fluid text-center">
-      <h1>Tela de Regimento!</h1>
+            <p>Prezado/a aluno/a,
+            Você está recebendo este manual do aluno que trás as Normas de Orientação Didática
+            que tem como finalidade prestar-lhes esclarecimentos acerca desta Instituição.
+            Nesse documento, você vai encontrar a estrutura organizacional e os dispositivos que
+            regem e regulamentam a sua vida acadêmica, bem como os serviços que a escola tem a
+            oferecer. Além de conter o Regulamento do Corpo Discente (Resolução nº 42/CS, de
+            02/12/2013.)</p>
+            <p>Você deve procurar conhecer este Manual para utilizá-lo com sabedoria no seu
+            cotidiano escolar, durante todo o tempo que permanecer aqui na Instituição.
+            A Coordenação Pedagógica estará à sua disposição para esclarecer quaisquer dúvidas
+            que permaneçam em relação ao conteúdo deste material, em qualquer tempo.
+            Sintam-se acolhidos neste IFAL – Campus Maceió – que tem como missão: “Promover
+            uma educação de qualidade social, pública e gratuita, fundamentada no princípio da
+            indissociabilidade entre ensino, pesquisa e extensão, a fim de formar cidadãos críticos para o
+            mundo do trabalho e contribuir para o desenvolvimento sustentável”.</p>
+            <p>Equipe Pedagógica</p>
+            <p>Diretoria de Ensino</p>
+            <p>IFAL - Campus Maceió</p>
+            <p>
+            Mensagem da Coordenação Pedagógica
+            Coração de Estudante
+            "[...] Já podaram seus momentos
+            Desviaram seu destino
+            Seu sorriso de menino
+            Tantas vezes se escondeu
+            Mas renova-se a esperança
+            Nova aurora a cada dia
+            E há que se cuidar do broto
+            Pra que a vida nos dê flor e fruto
+            Coração de estudante
+            Há que se cuidar da vida
+            Há que se cuidar do mundo
+            Tomar conta da amizade
+            Alegria e muito sonho
+            Espalhados no caminho
+            Verdes, plantas, sentimento
+            Folha, coração, juventude e fé"
+            Milton Nascimento e Wagner Tiso</p>
+            <h4>1 BREVE HISTÓRICO DO IFAL</h4>
+            <p>O Instituto Federal de Educação, Ciência e Tecnologia de Alagoas, também denominado Instituto
+            Federal de Alagoas (IFAL), foi criado por meio da Lei nº 11.892/2008, que estabeleceu a implantação da
+            Rede Federal de Educação Profissional e Tecnológica, com 38 Institutos, dois Cefet's, uma Universidade
+            Tecnológica e o Colégio Pedro II.</p>
+            <p>Em Alagoas, o IFAL é resultado de uma junção entre o Centro Federal de Educação Tecnológica
+            de Alagoas (CEFET/AL), e a Escola Agrotécnica Federal de Satuba (EAFS). O Cefet (antes Escola
+            Técnica Federal de Alagoas) é originário da Escola de Aprendizes e Artífices, que foi criada em 23 de
+            setembro de 1909 pelo presidente Nilo Peçanha, com cursos profissionalizantes, enquanto a Agrotécnica
+            de Satuba foi implantada em 30 de agosto de 1911, para oferta de cursos técnicos da área agrícola.
+            Trata-se de uma instituição de educação profissional e superior, vinculada à Secretaria de
+            Educação Profissional e Tecnologia do Ministério da Educação (Setec/MEC) e que detém autonomia
+            administrativa, patrimonial, financeira, didático-pedagógica e disciplinar equiparada às universidades
+            federais.</p>
+            <p>Com esse status, o IFAL é um complexo de educação que engloba pesquisa, extensão e ensino
+            desde a formação básica à pós-graduação, proporcionando, deste modo, uma formação integral ao
+            cidadão, por intermédio dos cursos de formação inicial, técnicos, superiores de tecnologia, de
+            bacharelado e de licenciatura e pós-graduação lato sensu e stricto sensu.</p>
+            <p>O IFAL é composto pela Reitoria e cinco pró-reitorias (Ensino, Pesquisa, Extensão,
+            Desenvolvimento Institucional e Administração e Planejamento). Possui mais de 1200 servidores e
+            atende a mais de 10 mil alunos, de modo a contribuir para a formação profissional e inserção de jovens e
+            adultos no mundo do trabalho, com credibilidade e qualidade de ensino.</p>
+            <p>Atualmente, o IFAL dispõe de 16 Campi, localizados em Maceió, Palmeira dos Índios, Satuba,
+            Marechal Deodoro, Arapiraca, Piranhas, Penedo, Maragogi, Murici, São Miguel dos Campos, Santana do
+            Ipanema, Rio Largo, Coruripe, Batalha, Viçosa e um Campus Avançado, em Maceió, no bairro Benedito
+            11
+            Bentes, o mais populoso da capital alagoana.></p>
+            <p>O IFAL é uma instituição de educação superior, básica e profissional, pluricurricular e
+            multiCampi, especializada na oferta de educação profissional e tecnológica nas diferentes modalidades
+            de ensino, com base na conjugação de conhecimentos técnicos e tecnológicos com as suas práticas
+            pedagógicas, nos termos da Lei vigente.</p>
+            <p>Enquanto instituição de Educação Profissional, ao IFAL cabe a oferta de ensino nos seguintes
+            termos:</p>
+            <p> cursos de formação inicial e continuada de trabalhadores;</p>
+            <p> educação profissional técnica de nível médio, nas formas integrada e/ou subsequente e na
+            modalidade EJA (Educação de Jovens e Adultos);</p>
+            <p> ensino superior de graduação tecnológica, bacharelados e licenciaturas, presencial e à
+            distância, além de pós-graduação.</p>
+            <p>A história do Campus Maceió teve início em 23 de setembro de 1909, com a criação de dezenove
+            Escolas de Aprendizes e Artífices, através do Decreto Nº 7.566, assinado pelo Presidente da República
+            Nilo Peçanha. Assim, começava a Rede Federal de Ensino Profissionalizante no Brasil, em diferentes
+            unidades federativas, inclusive Alagoas, onde a inauguração da escola ocorreu em janeiro de 1910, em
+            um prédio da Rua Boa Vista, no Centro de Maceió. No ano de 1937, instalada, então, no prédio onde hoje
+            funciona o Espaço Cultural da UFAL, a Escola de Aprendizes e Artífices passou a ser chamada de Liceu
+            de Artes e Ofícios.</p>
+            <p>Na sequência, transformou-se na Escola Industrial de Maceió e, depois, na Escola Industrial
+            Deodoro da Fonseca. A transformação em Escola Técnica Federal de Alagoas (ETFAL) aconteceu em
+            1968, já na sua sede definitiva: esquina da Rua Mizael Domingues com a Rua Barão de Atalaia, Centro. A
+            partir do dia 22 de março de 1999 foi implantado o Centro Federal de Educação Tecnológica de Alagoas
+            (CEFET-AL), substituindo a ETFAL, e passando a ofertar alguns Cursos Superiores Tecnológicos.</p>
+            <p>Finalmente, através da Lei nº 11.892/08, de 29 de dezembro de 2008, sancionada pelo presidente Luiz
+            Inácio Lula da Silva, foram criados 38 Institutos Federais de Educação, Ciência e Tecnologia (IF), entre
+            eles o Instituto Federal de Alagoas (IFAL), cuja Reitoria está instalada em Maceió, na Rua Odilon
+            12
+            Vasconcelos, 103 (esquina com a Av. Júlio Marques Luz), Jatiúca. Maceió – Alagoas. O prédio da rua
+            Barão de Atalaia passou a ser denominado: Campus Maceió.<p>
+            <p>2 ORGANIZAÇÃO BÁSICA DO IFAL NO
+            CAMPUS MACEIÓ
+            O IFAL, por se tratar de uma autarquia federal, possui uma estrutura administrativa um
+            pouco diferenciada de outras escolas que você conhece: detém autonomia administrativa,
+            patrimonial, financeira, didático-pedagógica e disciplinar.<p>
+            <p>O atual Reitor da instituição é o Prof. Ms. Sérgio Teixeira Costa. O IFAL está vinculado
+            ao Ministério da Educação (MEC), sob a responsabilidade da Secretaria de Educação
+            Profissional e Tecnológica (SETEC).<p>
+            <p>Atualmente a estrutura administrativa do Campus Maceió é a seguinte:</p>
+            <p>DIREÇÃO GERAL (DG) JEANE MARIA DE MELO</p>
+            <p>DIRETORIA DE ADMINISTRAÇÃO (DA) MARIA MADALENA MARQUES</p>
+            <p>DIRETORIA DE ENSINO (DE) GISELE FERNANDES LOURES</p>
+            <p>DEPARTAMENTO DE ENSINO TÉCNICO (DET) WALTER PEREIRA VIANNA JR</p>
+            <p>COORDENAÇÃO DE TEC SEGURANÇA DO TRABALHO SARAH MEDEIRO SOUTO</p>
+            <p>COORDENAÇÃO DE TEC. ESTRADAS GREGORY AGUIAR C. BARBOSA</p>
+            <p>COORDENAÇÃO DE TEC. INFORMÁTICA JAILTON CARDOSO DA CRUZ</p>
+            <p>COORDENAÇÃO DE TEC. QUIMICA JOHNNANTAN DUARTE DE FREITAS</p>
+            <p>COORDENAÇÃO DE TEC. ELETROTÉCNICA JORGE BATISTA SANTOS JUNIOR</p>
+            <p>COORDENAÇÃO DE TEC. MECÂNICA ELVYS ALVES SOARES</p>
+            <p>COORDENAÇÃO DE TEC. ELETRÔNICA ANTENOR FARIAS BARBOSA</p>
+            <p>COORDENAÇÃO DE TEC. EDIFICAÇÕES LOURIVAL LOPES DOS SANTOS FILHO</p>
+            <p>COORDENAÇÃO DO PROEJA - ARTESANATO ANA CRISTINA SANTOS LIMEIRA</p>
+            <p>DEPARTAMENTO ACADÊMICO DE FORMAÇÃO GERAL
+            ( DAFG)</p>
+            <p>CARLOS ALBERTO SILVA DOS SANTOS</p>
+            <p>COORDENAÇÃO DE FÍSICA HERON TEIXEIRA AMORIM</p>
+            <p>COORDENAÇÃO DE CIÊNCIAS HUMANAS DANIELA RIBEIRO DE BULHOES JOBIM</p>
+            <p>COORDENAÇÃO DE EDUCAÇÃO FÍSICA E ESPORTES SILVIO LEONARDO NUNES DE OLIVEIRA</p>
+            <p>COORDENAÇÃO DE BIOLOGIA MARIA LAUSANNE DAMASCENO CORREIA
+            13</p>
+            <p>COORDENAÇÃO DE MATEMÁTICA ANDERSON RANGEL BATISTA SIQUEIRA</p>
+            <p>COORDENAÇÃO DE LINGUAGENS E CÓDIGOS (COLIC) VALMIR PIMENTEL AMARAL</p>
+            <p>DEPARTAMENTO DE ENSINO SUPERIOR - DES ERONILMA BARBOSA DA SILVA BEUX</p>
+            <p>COORDENAÇÃO DE BACH. ENGENHARIA CIVIL MANOEL MARTINS DOS SANTOS FILHO</p>
+            <p>COORDENAÇÃO DAS LICENCIATURAS ELISABETE DUARTE DE OLIVEIRA</p>
+            <p>COORDENAÇÃO DE LIC. QUÍMICA PHABYANNO RODRIGUES LIMA</p>
+            <p>COORDENAÇÃO DE LIC. FÍSICA ALEX EMANUEL BARROS COSTA</p>
+            <p>COORDENAÇÃO DE LIC. EM CIÊNCIAS BIOLÓGICAS SHEYLA FERREIRA LIMA COELHO</p>
+            <p>COORDENAÇÃO DE LIC. EM LETRAS FÁBIO JOSÉ DOS SANTOS</p>
+            <p>COORDENAÇÃO DE LIC. EM MATEMÁTICA VALDIR SOARES COSTAS</p>
+            <p>COORDENAÇÃO DE BACH. SIST. INFORMAÇÃO LEONARDO MELO DE MEDEIROS</p>
+            <p>COORDENAÇÃO DE TECNOL. DESIGN INTERIORES IOLITA MARQUES DE LIRA</p>
+            <p>COORDENAÇÃO DE TECNOL. GESTAO DE TURISMO GILMAR SOARES FURTADO</p>
+            <p>COORDENAÇÃO DE TECNOL. HOTELARIA JOSE ALMEIDA DOS SANTOS</p>
+            <p>COORDENAÇÃO DE TECNOL CONSTRUÇÃO EDIFÍCIO JOÃO GILBERTO TEIXEIRAS SILVA</p>
+            <p>COORDENAÇÃO DE TECNOL ALIMENTOS JONAS DOS SANTOS SOUZA</p>
+            <p>COORDENAÇÃO PEDAGÓGICA WANESSA LOPES DE MELO</p>
+            <p>PEDAGOGA - AFASTADA PARA MESTRADO HELISABETY BARROS MENDES DA FONSECA</p>
+            <p>PEDAGOGA MARIA APARECIDA DA SILVA</p>
+            <p>PEDAGOGA WANESSA LOPES DE MELO</p>
+            <p>PEDAGOGA ADRIANA CARLA M. VALENÇA DE ALENCAR</p>
+            <p>PEDAGOGA MARIA DOS PRAZERES MEDEIROS</p>
+            <p>TÉCNICA EM ASSUNTOS EDUCACIONAIS VÂNIA MARIA GALDINO DA SILVA</p>
+            <p>DIRETORIA DE APÓIO ACADÊMICO MARIA BETÂNIA VILLAR</p>
+            <p>COORDENAÇÃO DE REGISTROS ACADÊMICOS LAURO LOPES PEREIRA NETO</p>
+            <p>COORDENAÇÃO DO TURNO DIURNO -</p>
+            <p>COORDENAÇÃO DO TURNO NOTURNO JOSÉ WAGNER LOPES</p>
+            <p>COORDENAÇÃO DA BIBLIOTECA -</p>
+            <p>COORDENAÇÃO DE SERVIÇOS GRÁFICOS BEROALDO CORRÊA DE OLIVEIRA</p>
+            <p>SETOR DE PSICOLOGIA -</p>
+            <p>SETOR DE SERVIÇO SOCIAL -</p>
+            <p>DEPARTAMENTO DE ASSISNTENCIA ESTUDANTIL (DAE) RITA DE CASSIA TENÓRIO DUARTE.</p>
+            <p>DIRETORIA DE EXTENSÃO, PESQUISA E PÓSGRADUAÇÃO</p>
+            (DEPP) ALAN JOHN DUARTE DE FREITAS</p>
+            <p>COORD.DE INTEGRAÇÃO ESCOLA-EMPRESA (CIE-E) JOÃO BATISTA DO AMARAL</p>
+            <p>COORD.DE EXTENSÃO -</p>
+            <p>COORD.DE PESQUISA E PÓS-GRADUAÇÃO DEMETRIUS PEREIRA MORILLA
+            14</p>
+            <p>3 NORMAS E PROCEDIMENTOS</p>
+            <h4>ACADÊMICOS</h4>
+            <p>
+            <p>No dia-a-dia do IFAL-Campus Maceió, o aluno deve ficar atento aos procedimentos
+            operacionais para que a sua rotina acadêmica seja tranquila. Esses procedimentos estão de
+            acordo com as Normas de Organização Didática da Instituição.<p>
+            Todas as atividades acadêmicas especificadas neste material em seus itens 4 e 5 têm
+            prazos estabelecidos e os pedidos deverão ser feitos na data prevista em Edital e/ou
+            Calendário Letivo que necessitarão ser observados e cumpridos. A perda desses prazos
+            acarretará prejuízos.</p>
+            <p>Todas as solicitações dar-se-ão a partir de requerimento à Diretoria de Ensino do
+            Campus.</p>
+            <p>Para tomar conhecimento do andamento e/ou tomar ciência do processo decorrente do
+            seu requerimento, o aluno deverá procurar o Departamento de Apoio Acadêmico.</p>
+            <h4>3.1 ADMISSÃO AOS CURSOS</h4>
+            <p>(Normas de Organização Didática, Cap. IV, Art. 7 e 8)
+            A admissão aos cursos do IFAL far-se-á por meio de:</p>
+            <p>a) processo seletivo, nas épocas previstas em Edital Público, que assegure ao candidato
+            igualdade de condições para o acesso, de acordo com a missão precípua dessa
+            instituição;</p>
+            <p>b) transferência e equivalência, mediante a existência de vagas, observando as
+            disposições normativas de cada nível de ensino.</p>
+            <p>Também poderão existir outras formas de admissão ao IFAL, em consonância com os
+            seus objetivos, mediante a constituição de convênios, parcerias e programas para a
+            implementação da educação profissional.</p>
+            <h4>3.2 MATRÍCULA</h4>
+            <p>(Normas de Organização Didática, Cap. VI, Seção I, Art. 17 e 18)
+            15</p>
+            <p>I - Será efetuada no Campus Maceió, mediante requerimento fornecido pelo IFAL, o qual deverá
+            ser devidamente preenchido, assinado e a ele anexados os documentos exigidos, conforme
+            divulgação em edital de processo seletivo.</p>
+            <p>II - Serão considerados desistentes os candidatos aprovados em processo seletivo, que não
+            efetuarem a matrícula dentro do prazo estipulado no edital.</p>
+            <p>III - Será nula de pleno direito a matrícula realizada com documentos falsos ou adulterados,
+            ficando o responsável passível de implicações legais.</p>
+            <p>IV - Serão permitidas ao aluno até duas matrículas no IFAL, desde que em cursos de diferentes
+            níveis de ensino, para as quais haja compatibilidade de horários.</p>
+            <h4>3.3 RENOVAÇÃO DA MATRÍCULA</h4>
+            <p>(Normas de Organização Didática, Cap. VI, Seção II, Art. 19)<p>
+            A renovação da matrícula deverá ser efetuada obrigatoriamente no início de cada
+            período letivo. Mesmo quando houver prática profissional e/ou trabalho de conclusão de curso
+            após cursar todas as disciplinas que integram o currículo, a solicitação de renovação de
+            matrícula também é obrigatória e imprescindível.
+            3.4 TRANCAMENTO DA MATRÍCULA
+            (Normas de Organização Didática, Cap. VI, Seção III, Art. 20, 21, 22 e 23)
+            O trancamento da matrícula poderá ser concedido ao aluno na forma compulsória ou
+            voluntária:</p>
+                    </div>
+                  </div>
 
-      <p>Está será a tela do regimento</p>
+        </div>
+      </div>
     </div>
   </div>
 
 
 
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
+  <script>
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
 
-}
+  }
 </script>
 
 <script>
 $('#exampleModal').on('show.bs.modal', function (event) {
-	var button = $(event.relatedTarget) // Button that triggered the modal
-	var recipient = button.data('whatever') // Extract info from data-* attributes
-	// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-	// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-	var modal = $(this)
-	modal.find('.modal-title').text('New message to ' + recipient)
-	modal.find('.modal-body input').val(recipient)
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
 })
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 </script>
 <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
