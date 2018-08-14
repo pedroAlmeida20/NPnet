@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Monitoria</title>
+</head>
+<body>
+
+  <div class="modal fade" id="CadastroM" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Agendamento</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="Ttarefa">Titulo da Tarefa</label>
+              <input type="text" class="form-control" id="Ttarefa">
+            </div>
+            <div class="form-group">
+              <label for="local">Local</label>
+              <input type="text" class="form-control" id="local">
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <div class="form-group">
+                  <label for="horario">Horario</label>
+                  <input type="time" class="form-control" id="horario">
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="form-group">
+                  <label for="data">Data</label>
+                  <input type="date" class="form-control" id="data">
+                </div>
+              </div>
+              <div class=" col-xs-4">
+                <div class="form-group">
+                  <label>Nivel de importância</label>
+                  <select class="btn" style="border-color:grey;">
+                    <option>Selecione</option>
+                    <option>Alta</option>
+                    <option>Média</option>
+                    <option>Baixa</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-1">
+                <label for="subject">Assunto</label>
+              </div>
+              <div class="col-xs-12">
+                <textarea id="subject" name="subject" placeholder="Escreva aqui o assunto da tarefa..." style="height:150px; width:500px"></textarea>
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!--Fim do Modal Casdatro de tarefa-->
+
+</body>
+</html>

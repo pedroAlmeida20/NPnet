@@ -9,6 +9,7 @@
   <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <!-- Última versão CSS compilada e minificada -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -22,21 +23,66 @@
   <![endif]-->
 
   <style>
+
+  .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+  }
+
+  .active, .accordion:hover {
+      background-color: #FFD700;
+  }
+
+  .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+  }
+
   span, a{
     color:#FFD700;
   }
-  td {
-    text-align: center;
-    padding: 8px;
-  }
-  th {
-    text-align: center;
-    padding: 8px;
-  }
+
   .fundo {
     position: relative;
     background-image: url("https://image.freepik.com/vetores-gratis/mao-icones-sobre-educacao-desenhado-em-um-fundo-preto_1306-141.jpg");
     background-color: #cccccc;
+  }
+
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .collapsible:hover {
+    background-color: #FFD700;
+  }
+
+  .contenti {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  .responsive {
+    max-width: 100%;
+    height: 200px;
   }
 
     #myInput {
@@ -73,9 +119,7 @@
 
 </style>
 </head>
-<body class="fundo container-fluid">
-
-
+<body class="fundo">
   <!--Inicio do Modal cadastro de monitor-->
   <div class="modal fade" id="CadastroM" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
     <div class="modal-dialog" role="document">
@@ -304,7 +348,7 @@
                 <li class="btn" data-toggle="modal" data-target="#RemoveM"><a><i class="fas fa-user-minus"></i> Remover Monitor</a></li>
                 <li class="btn" data-toggle="modal" data-target="#ListaM"><a><i class="fas fa-clipboard-list"></i> Lista de Monitores</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="relatorios.html"><i class="far fa-address-book"></i> Relatórios</a></li>
+                <li><a href="#"><i class="far fa-address-book"></i> Relatórios</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#"><i class="far fa-list-alt"></i> Frequência</a></li>
               </ul>
@@ -321,7 +365,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cogs"></i> Configurações <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#"><i class="far fa-user-circle"></i> Perfil</a></li>
+                <li><a href="AcessoProfessorConfiguracoes.html"><i class="far fa-user-circle"></i> Perfil</a></li>
                 <li><a href="#"> <i class="fas fa-unlock-alt"></i> Redefinir Senha</a></li>
                 <li><a href="#"><i class="fas fa-adjust"></i> Alterar Visibilidade</a></li>
                 <li role="separator" class="divider"></li>
@@ -333,245 +377,174 @@
       </div><!-- /.container-fluid -->
     </nav>
   </div>
-
-  <!--Inicio do Modal Casdatro de tarefa-->
-  <div class="modal fade" id="CadastroTarefa" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="gridSystemModalLabel">Agendamento</h4>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="Ttarefa">Titulo da Tarefa</label>
-              <input type="text" class="form-control" id="Ttarefa">
-            </div>
-            <div class="form-group">
-              <label for="local">Local</label>
-              <input type="text" class="form-control" id="local">
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label for="horario">Horario</label>
-                  <input type="time" class="form-control" id="horario">
-                </div>
-              </div>
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label for="data">Data</label>
-                  <input type="date" class="form-control" id="data">
-                </div>
-              </div>
-              <div class=" col-xs-4">
-                <div class="form-group">
-                  <label>Nivel de importância</label>
-                  <select class="btn" style="border-color:grey;">
-                    <option>Selecione</option>
-                    <option>Alta</option>
-                    <option>Média</option>
-                    <option>Baixa</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-1">
-                <label for="subject">Assunto</label>
-              </div>
-              <div class="col-xs-12">
-                <textarea id="subject" name="subject" placeholder="Escreva aqui o assunto da tarefa..." style="height:150px; width:500px"></textarea>
-              </div>
-            </div>
-
-
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Salvar</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-  <!--Fim do Modal Casdatro de tarefa-->
-
-
   <div class="container">
-    <div class="row" id="Agenda">
-      <div class="text-center">
-        <div class="container">
-          <div class="row"style="background-Color:white;opacity:1">
-            <div class="col-xs-12">
-              <div class="list-group">
-                <a href="#" class="list-group-item active">
-                  <h4 class="list-group-item-heading">Aula de Banco de dados</h4>
-                  <div class="row">
-                    <div class="col-sm-offset-1 col-xs-12">
-                      <div style="overflow-x:auto;">
-                        <table>
-                          <tr class="text-center">
-                            <th>Local</th>
-                            <th>Horário</th>
-                            <th>Data</th>
-                            <td>Importancia</td>
-                          </tr>
-                          <tr class="text-center">
-                            <td>43</td>
-                            <td>8:30</td>
-                            <td>30/08/2018</td>
-                            <td>Alta</td>
-                          </tr>
+    <div class="row">
+      <div class="col-xs-12" >
+        <div >
 
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="list-group-item-text">Será visto conteudo sobe triggers e procedures</p>
-                </a>
-                <a href="#" class="list-group-item ">
-                  <h4 class="list-group-item-heading">Reunião do Colegiado</h4>
-                  <div class="row">
-                    <div class="col-sm-offset-1 col-xs-12">
-                      <div style="overflow-x:auto;">
-                        <table>
-                          <tr class="text-center">
-                            <th>Local</th>
-                            <th>Horário</th>
-                            <th>Data</th>
-                            <td>Importancia</td>
-                          </tr>
-                          <tr class="text-center">
-                            <td>66</td>
-                            <td>8:30</td>
-                            <td>30/08/2018</td>
-                            <td>Alta</td>
-                          </tr>
+<div class="row">
+  <div class=" col-xs-12">
+          <button class="accordion"> Parciais</button>
+          <div class="panel">
+            <div class=" container">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Procurar monitor..." title="tipoNome">
 
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="list-group-item-text">Será abordado a insfra estrutura do curso</p>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">Aula de Programação Web</h4>
-                  <div class="row">
-                    <div class="col-sm-offset-1 col-xs-12">
-                      <div style="overflow-x:auto;">
-                        <table>
-                          <tr class="text-center">
-                            <th>Local</th>
-                            <th>Horário</th>
-                            <th>Data</th>
-                            <td>Importancia</td>
-                          </tr>
-                          <tr class="text-center">
-                            <td>71</td>
-                            <td>8:30</td>
-                            <td>30/08/2018</td>
-                            <td>Alta</td>
-                          </tr>
+            <table id="tabelaFiltro">
+              <tr class="header">
+                <th style="width:30%;">Nome</th>
+                <th style="width:30%;">Monitoria</th>
+              </tr>
+              <tr>
+                <td>Emanuelle Melo</td>
+                <td>Algoritmo</td>
+              </tr>
+              <tr>
+                <td>Emanuel Araujo</td>
+                <td>POO</td>
+              </tr>
 
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="list-group-item-text">Será abordado conteudos sobre GET e SET</p>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">Aula de Programação Web</h4>
-                  <div class="row">
-                    <div class="col-sm-offset-1 col-xs-12">
-                      <div style="overflow-x:auto;">
-                        <table>
-                          <tr class="text-center">
-                            <th>Local</th>
-                            <th>Horário</th>
-                            <th>Data</th>
-                            <td>Importancia</td>
-                          </tr>
-                          <tr class="text-center">
-                            <td>71</td>
-                            <td>12:30</td>
-                            <td>01/09/2018</td>
-                            <td>Alta</td>
-                          </tr>
+              <tr>
+                <tr>
+                  <td>Carlos Henrique</td>
+                  <td>POO</td>
+                </tr>
+                <td>Itala Mayara</td>
+                <td>POO</td>
+              </tr>
 
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="list-group-item-text">Será abordado conteudos sobre GET e SET</p>
-                </a><br>
-                <div class="row">
-                  <div class="col-xs-offset-4 col-xs-4">
-                    <button class="btn btn-success" data-toggle="modal" data-target="#CadastroTarefa">Cadastrar Nova Tarefa</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </table>
+          </div>
+          </div>
+        </div>
+  <div class="col-xs-12">
+          <button class="accordion">Finais</button>
+          <div class="panel">
+            <div class=" container">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Procurar monitor..." title="tipoNome">
+
+            <table id="tabelaFiltro">
+              <tr class="header">
+                <th style="width:30%;">Nome</th>
+                <th style="width:30%;">Monitoria</th>
+              </tr>
+              <tr>
+                <td>Emanuelle Melo</td>
+                <td>Algoritmo</td>
+              </tr>
+              <tr>
+                <td>Emanuel Araujo</td>
+                <td>POO</td>
+              </tr>
+
+              <tr>
+                <tr>
+                  <td>Carlos Henrique</td>
+                  <td>POO</td>
+                </tr>
+                <td>Itala Mayara</td>
+                <td>POO</td>
+              </tr>
+
+            </table>
+          </div>
           </div>
         </div>
       </div>
+
+        </div>
+      </div>
     </div>
+  </div>
 
 
-    <script>
-    function openPage(pageName,elmnt,color) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-      document.getElementById(pageName).style.display = "block";
-      elmnt.style.backgroundColor = color;
 
+  <script>
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
     }
-    </script>
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
 
-    <script>
-    $('#exampleModal').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget) // Button that triggered the modal
-      var recipient = button.data('whatever') // Extract info from data-* attributes
-      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-      var modal = $(this)
-      modal.find('.modal-title').text('New message to ' + recipient)
-      modal.find('.modal-body input').val(recipient)
-    })
-    </script>
+  }
+</script>
 
-    <!--Inicio de script para filtro de tabela-->
-      <script>
-    function myFunction() {
-      var input, filter, table, tr, td, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("tabelaFiltro");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
+<script>
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
         }
+    });
+}
+</script>
+
+<!--Inicio de script para filtro de tabela-->
+  <script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tabelaFiltro");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
       }
     }
-    </script>
+  }
+}
+</script>
 
-    <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Última versão JavaScript compilada e minificada -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
-  </html>
+<!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Última versão JavaScript compilada e minificada -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

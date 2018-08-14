@@ -60,9 +60,240 @@
     height: 200px;
   }
 
+    #myInput {
+      background-image: url('icones/busca1.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    #tabelaFiltro{
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    #tabelaFiltro th, #tabelaFiltroe td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #tabelaFiltro tr.header, #tabelaFiltro tr:hover {
+      background-color: #f1f1f1;
+    }
+
+
 </style>
 </head>
 <body class="fundo">
+  <!--Inicio do Modal cadastro de monitor-->
+  <div class="modal fade" id="CadastroM" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Cadastrar Monitor</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+
+            <div class="form-group">
+              <label for="nomeM">Nome do Monitor</label>
+              <input type="cpf" class="form-control" id="nomeM">
+            </div>
+            <div class="row">
+              <div class="col-xs-5">
+            <div class="form-group">
+              <label for="number">CPF</label>
+              <input type="text" class="form-control" id="cpf">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-5">
+          <div class="form-group">
+            <label for="number">Matricula</label>
+            <input type="text" class="form-control" id="cpf">
+          </div>
+        </div>
+        </div>
+        </div>
+            <div class="form-group">
+              <label for="tituloM">Titulo da Monitoria</label>
+              <input type="text" class="form-control" id="tituloM">
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-5">
+              <label for="local">Local</label>
+              <input type="text" class="form-control" id="local">
+            </div>
+          </div>
+        </div>
+
+            <div class="row">
+              <div class="col-xs-4">
+                <div class="form-group">
+                  <label for="horario">Horario</label>
+                  <input type="time" class="form-control" id="horario">
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="form-group">
+                  <label for="data">Data de Inicio</label>
+                  <input type="date" class="form-control" id="data">
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="form-group">
+                  <label for="data">Data Fim</label>
+                  <input type="date" class="form-control" id="data">
+                </div>
+              </div>
+              <div class=" col-xs-4">
+                <div class="form-group">
+                  <label>Nivel da Monitoria</label>
+                  <select class="btn" style="border-color:grey;">
+                    <option>Selecione</option>
+                    <option>Médio</option>
+                    <option>Superior</option>
+                    <option>Técnico</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!--Fim do Modal Casdatro de Monitor-->
+
+
+  <!--Inicio do Modal remove monitor-->
+  <div class="modal fade" id="RemoveM" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Removendo Monitor</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+
+            <div class="form-group">
+              <label for="nomeM">Nome do Monitor</label>
+              <input type="cpf" class="form-control" id="nomeM">
+            </div>
+            <div class="row">
+              <div class="col-xs-5">
+            <div class="form-group">
+              <label for="number">CPF</label>
+              <input type="text" class="form-control" id="cpf">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-5">
+          <div class="form-group">
+            <label for="number">Matricula</label>
+            <input type="text" class="form-control" id="cpf">
+          </div>
+        </div>
+        </div>
+        </div>
+
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!--Fim do Modal Remove  Monitor-->
+
+
+
+  <!--Inicio do Modal Lista de monitor-->
+  <div class="modal fade" id="ListaM" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Lista de Monitores</h4>
+        </div>
+        <div class="modal-body">
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Procurar monitor..." title="tipoNome">
+
+          <table id="tabelaFiltro">
+            <tr class="header">
+              <th style="width:30%;">Nome</th>
+              <th style="width:30%;">Matricula</th>
+              <th style="width:30%;">CPF</th>
+              <th style="width:30%;">Monitoria</th>
+            </tr>
+            <tr>
+              <td>Emanuelle Melo</td>
+              <td>2015314547</td>
+              <td>121.212.312-04</td>
+              <td>Algoritmo</td>
+            </tr>
+            <tr>
+              <td>Emanuel Araujo</td>
+              <td>2015312514</td>
+              <td>321.785.985-05</td>
+              <td>POO</td>
+            </tr>
+            <tr>
+              <td>Emerson Jonas</td>
+              <td>2015318564</td>
+              <td>998.787.121-85</td>
+              <td>Auto Cad</td>
+            </tr>
+            <tr>
+              <tr>
+                <td>Carlos Henrique</td>
+                <td>2015318596</td>
+                <td>011.001.896-42</td>
+                <td>POO</td>
+              </tr>
+              <td>Itala Mayara</td>
+              <td>2015315544</td>
+              <td>991.787.021-10</td>
+              <td>POO</td>
+            </tr>
+
+          </table>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Acessar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!--Fim do Modal Lista de Monitor-->
 
   <div class="row">
 
@@ -76,7 +307,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <li class="active"><a class="navbar-brand" href="AcessoProfessor.html">Portal Monitoria</a></li>
+          <li><a class="navbar-brand" href="AcessoProfessor.html">Portal Monitoria</a></li>
 
         </div>
 
@@ -88,11 +319,11 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-chalkboard-teacher"></i> Monitoria <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#"><i class="fas fa-user-plus"></i> Cadastrar Monitor</a></li>
-                <li><a href="#"><i class="fas fa-user-minus"></i> Remover Monitor</a></li>
-                <li><a href="#"><i class="fas fa-clipboard-list"></i> Lista de Monitores</a></li>
+                <li class="btn" data-toggle="modal" data-target="#CadastroM"><a><i class="fas fa-user-plus" ></i> Cadastrar Monitor</a></li>
+                <li class="btn" data-toggle="modal" data-target="#RemoveM"><a><i class="fas fa-user-minus"></i> Remover Monitor</a></li>
+                <li class="btn" data-toggle="modal" data-target="#ListaM"><a><i class="fas fa-clipboard-list"></i> Lista de Monitores</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#"><i class="far fa-address-book"></i> Relatórios</a></li>
+                <li><a href="relatorios.html"><i class="far fa-address-book"></i> Relatórios</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#"><i class="far fa-list-alt"></i> Frequência</a></li>
               </ul>
@@ -420,6 +651,26 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+}
+</script>
+<!--Inicio de script para filtro de tabela-->
+  <script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tabelaFiltro");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
 }
 </script>
 <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
